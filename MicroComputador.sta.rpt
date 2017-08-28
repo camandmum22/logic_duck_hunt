@@ -1,0 +1,1240 @@
+TimeQuest Timing Analyzer report for MicroComputador
+Tue Sep 02 13:19:44 2014
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Clock to Output Times
+ 12. Minimum Clock to Output Times
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Clock to Output Times
+ 19. Minimum Clock to Output Times
+ 20. Multicorner Timing Analysis Summary
+ 21. Clock to Output Times
+ 22. Minimum Clock to Output Times
+ 23. Setup Transfers
+ 24. Hold Transfers
+ 25. Report TCCS
+ 26. Report RSKM
+ 27. Unconstrained Paths
+ 28. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                   ;
++--------------------+----------------------------------------------------------------+
+; Quartus II Version ; Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition ;
+; Revision Name      ; MicroComputador                                                ;
+; Device Family      ; Arria GX                                                       ;
+; Device Name        ; EP1AGX20CF484C6                                                ;
+; Timing Models      ; Final                                                          ;
+; Delay Model        ; Combined                                                       ;
+; Rise/Fall Delays   ; Unavailable                                                    ;
++--------------------+----------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 72.61 MHz ; 72.61 MHz       ; clock      ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -6.860 ; -265.818      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.490 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.675 ; -54.035               ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; BusInterno[*]  ; clock      ; 17.005 ; 17.005 ; Rise       ; clock           ;
+;  BusInterno[0] ; clock      ; 15.585 ; 15.585 ; Rise       ; clock           ;
+;  BusInterno[1] ; clock      ; 15.547 ; 15.547 ; Rise       ; clock           ;
+;  BusInterno[2] ; clock      ; 15.640 ; 15.640 ; Rise       ; clock           ;
+;  BusInterno[3] ; clock      ; 15.400 ; 15.400 ; Rise       ; clock           ;
+;  BusInterno[4] ; clock      ; 16.024 ; 16.024 ; Rise       ; clock           ;
+;  BusInterno[5] ; clock      ; 17.005 ; 17.005 ; Rise       ; clock           ;
+;  BusInterno[6] ; clock      ; 16.078 ; 16.078 ; Rise       ; clock           ;
+;  BusInterno[7] ; clock      ; 16.186 ; 16.186 ; Rise       ; clock           ;
+; Cout           ; clock      ; 18.840 ; 18.840 ; Rise       ; clock           ;
+; OperandoA[*]   ; clock      ; 14.713 ; 14.713 ; Rise       ; clock           ;
+;  OperandoA[0]  ; clock      ; 14.713 ; 14.713 ; Rise       ; clock           ;
+;  OperandoA[1]  ; clock      ; 13.834 ; 13.834 ; Rise       ; clock           ;
+;  OperandoA[2]  ; clock      ; 13.410 ; 13.410 ; Rise       ; clock           ;
+;  OperandoA[3]  ; clock      ; 13.781 ; 13.781 ; Rise       ; clock           ;
+;  OperandoA[4]  ; clock      ; 13.727 ; 13.727 ; Rise       ; clock           ;
+;  OperandoA[5]  ; clock      ; 14.423 ; 14.423 ; Rise       ; clock           ;
+;  OperandoA[6]  ; clock      ; 14.060 ; 14.060 ; Rise       ; clock           ;
+;  OperandoA[7]  ; clock      ; 13.256 ; 13.256 ; Rise       ; clock           ;
+; OperandoB[*]   ; clock      ; 14.051 ; 14.051 ; Rise       ; clock           ;
+;  OperandoB[0]  ; clock      ; 13.620 ; 13.620 ; Rise       ; clock           ;
+;  OperandoB[1]  ; clock      ; 13.351 ; 13.351 ; Rise       ; clock           ;
+;  OperandoB[2]  ; clock      ; 13.123 ; 13.123 ; Rise       ; clock           ;
+;  OperandoB[3]  ; clock      ; 13.958 ; 13.958 ; Rise       ; clock           ;
+;  OperandoB[4]  ; clock      ; 13.905 ; 13.905 ; Rise       ; clock           ;
+;  OperandoB[5]  ; clock      ; 13.467 ; 13.467 ; Rise       ; clock           ;
+;  OperandoB[6]  ; clock      ; 14.051 ; 14.051 ; Rise       ; clock           ;
+;  OperandoB[7]  ; clock      ; 13.558 ; 13.558 ; Rise       ; clock           ;
+; OutALU[*]      ; clock      ; 17.463 ; 17.463 ; Rise       ; clock           ;
+;  OutALU[0]     ; clock      ; 15.666 ; 15.666 ; Rise       ; clock           ;
+;  OutALU[1]     ; clock      ; 15.685 ; 15.685 ; Rise       ; clock           ;
+;  OutALU[2]     ; clock      ; 16.139 ; 16.139 ; Rise       ; clock           ;
+;  OutALU[3]     ; clock      ; 16.477 ; 16.477 ; Rise       ; clock           ;
+;  OutALU[4]     ; clock      ; 16.873 ; 16.873 ; Rise       ; clock           ;
+;  OutALU[5]     ; clock      ; 16.829 ; 16.829 ; Rise       ; clock           ;
+;  OutALU[6]     ; clock      ; 16.526 ; 16.526 ; Rise       ; clock           ;
+;  OutALU[7]     ; clock      ; 17.463 ; 17.463 ; Rise       ; clock           ;
+; addres[*]      ; clock      ; 9.154  ; 9.154  ; Rise       ; clock           ;
+;  addres[0]     ; clock      ; 9.154  ; 9.154  ; Rise       ; clock           ;
+;  addres[1]     ; clock      ; 8.945  ; 8.945  ; Rise       ; clock           ;
+;  addres[2]     ; clock      ; 8.545  ; 8.545  ; Rise       ; clock           ;
+;  addres[3]     ; clock      ; 8.377  ; 8.377  ; Rise       ; clock           ;
+; load           ; clock      ; 9.534  ; 9.534  ; Rise       ; clock           ;
+; BusInterno[*]  ; clock      ; 17.979 ; 17.979 ; Fall       ; clock           ;
+;  BusInterno[0] ; clock      ; 15.920 ; 15.920 ; Fall       ; clock           ;
+;  BusInterno[1] ; clock      ; 15.884 ; 15.884 ; Fall       ; clock           ;
+;  BusInterno[2] ; clock      ; 16.090 ; 16.090 ; Fall       ; clock           ;
+;  BusInterno[3] ; clock      ; 15.850 ; 15.850 ; Fall       ; clock           ;
+;  BusInterno[4] ; clock      ; 16.998 ; 16.998 ; Fall       ; clock           ;
+;  BusInterno[5] ; clock      ; 17.979 ; 17.979 ; Fall       ; clock           ;
+;  BusInterno[6] ; clock      ; 17.052 ; 17.052 ; Fall       ; clock           ;
+;  BusInterno[7] ; clock      ; 17.160 ; 17.160 ; Fall       ; clock           ;
+; Cout           ; clock      ; 19.133 ; 19.133 ; Fall       ; clock           ;
+; OperandoA[*]   ; clock      ; 14.998 ; 14.998 ; Fall       ; clock           ;
+;  OperandoA[0]  ; clock      ; 14.998 ; 14.998 ; Fall       ; clock           ;
+;  OperandoA[1]  ; clock      ; 14.648 ; 14.648 ; Fall       ; clock           ;
+;  OperandoA[2]  ; clock      ; 13.522 ; 13.522 ; Fall       ; clock           ;
+;  OperandoA[3]  ; clock      ; 14.135 ; 14.135 ; Fall       ; clock           ;
+;  OperandoA[4]  ; clock      ; 13.809 ; 13.809 ; Fall       ; clock           ;
+;  OperandoA[5]  ; clock      ; 14.237 ; 14.237 ; Fall       ; clock           ;
+;  OperandoA[6]  ; clock      ; 14.437 ; 14.437 ; Fall       ; clock           ;
+;  OperandoA[7]  ; clock      ; 13.549 ; 13.549 ; Fall       ; clock           ;
+; OperandoB[*]   ; clock      ; 15.120 ; 15.120 ; Fall       ; clock           ;
+;  OperandoB[0]  ; clock      ; 14.265 ; 14.265 ; Fall       ; clock           ;
+;  OperandoB[1]  ; clock      ; 14.140 ; 14.140 ; Fall       ; clock           ;
+;  OperandoB[2]  ; clock      ; 14.180 ; 14.180 ; Fall       ; clock           ;
+;  OperandoB[3]  ; clock      ; 15.119 ; 15.119 ; Fall       ; clock           ;
+;  OperandoB[4]  ; clock      ; 14.441 ; 14.441 ; Fall       ; clock           ;
+;  OperandoB[5]  ; clock      ; 14.624 ; 14.624 ; Fall       ; clock           ;
+;  OperandoB[6]  ; clock      ; 15.120 ; 15.120 ; Fall       ; clock           ;
+;  OperandoB[7]  ; clock      ; 14.436 ; 14.436 ; Fall       ; clock           ;
+; OutALU[*]      ; clock      ; 18.371 ; 18.371 ; Fall       ; clock           ;
+;  OutALU[0]     ; clock      ; 16.001 ; 16.001 ; Fall       ; clock           ;
+;  OutALU[1]     ; clock      ; 16.063 ; 16.063 ; Fall       ; clock           ;
+;  OutALU[2]     ; clock      ; 16.659 ; 16.659 ; Fall       ; clock           ;
+;  OutALU[3]     ; clock      ; 16.992 ; 16.992 ; Fall       ; clock           ;
+;  OutALU[4]     ; clock      ; 17.847 ; 17.847 ; Fall       ; clock           ;
+;  OutALU[5]     ; clock      ; 17.803 ; 17.803 ; Fall       ; clock           ;
+;  OutALU[6]     ; clock      ; 17.500 ; 17.500 ; Fall       ; clock           ;
+;  OutALU[7]     ; clock      ; 18.371 ; 18.371 ; Fall       ; clock           ;
+; R0[*]          ; clock      ; 11.675 ; 11.675 ; Fall       ; clock           ;
+;  R0[0]         ; clock      ; 11.537 ; 11.537 ; Fall       ; clock           ;
+;  R0[1]         ; clock      ; 10.913 ; 10.913 ; Fall       ; clock           ;
+;  R0[2]         ; clock      ; 11.675 ; 11.675 ; Fall       ; clock           ;
+;  R0[3]         ; clock      ; 11.257 ; 11.257 ; Fall       ; clock           ;
+;  R0[4]         ; clock      ; 11.505 ; 11.505 ; Fall       ; clock           ;
+;  R0[5]         ; clock      ; 10.926 ; 10.926 ; Fall       ; clock           ;
+;  R0[6]         ; clock      ; 11.305 ; 11.305 ; Fall       ; clock           ;
+;  R0[7]         ; clock      ; 10.841 ; 10.841 ; Fall       ; clock           ;
+; R1[*]          ; clock      ; 12.584 ; 12.584 ; Fall       ; clock           ;
+;  R1[0]         ; clock      ; 12.278 ; 12.278 ; Fall       ; clock           ;
+;  R1[1]         ; clock      ; 12.584 ; 12.584 ; Fall       ; clock           ;
+;  R1[2]         ; clock      ; 12.273 ; 12.273 ; Fall       ; clock           ;
+;  R1[3]         ; clock      ; 11.860 ; 11.860 ; Fall       ; clock           ;
+;  R1[4]         ; clock      ; 12.303 ; 12.303 ; Fall       ; clock           ;
+;  R1[5]         ; clock      ; 12.064 ; 12.064 ; Fall       ; clock           ;
+;  R1[6]         ; clock      ; 12.451 ; 12.451 ; Fall       ; clock           ;
+;  R1[7]         ; clock      ; 11.737 ; 11.737 ; Fall       ; clock           ;
+; R2[*]          ; clock      ; 13.192 ; 13.192 ; Fall       ; clock           ;
+;  R2[0]         ; clock      ; 12.791 ; 12.791 ; Fall       ; clock           ;
+;  R2[1]         ; clock      ; 12.728 ; 12.728 ; Fall       ; clock           ;
+;  R2[2]         ; clock      ; 13.192 ; 13.192 ; Fall       ; clock           ;
+;  R2[3]         ; clock      ; 12.571 ; 12.571 ; Fall       ; clock           ;
+;  R2[4]         ; clock      ; 12.621 ; 12.621 ; Fall       ; clock           ;
+;  R2[5]         ; clock      ; 12.335 ; 12.335 ; Fall       ; clock           ;
+;  R2[6]         ; clock      ; 12.773 ; 12.773 ; Fall       ; clock           ;
+;  R2[7]         ; clock      ; 12.356 ; 12.356 ; Fall       ; clock           ;
+; R3[*]          ; clock      ; 12.725 ; 12.725 ; Fall       ; clock           ;
+;  R3[0]         ; clock      ; 12.725 ; 12.725 ; Fall       ; clock           ;
+;  R3[1]         ; clock      ; 12.408 ; 12.408 ; Fall       ; clock           ;
+;  R3[2]         ; clock      ; 12.097 ; 12.097 ; Fall       ; clock           ;
+;  R3[3]         ; clock      ; 11.903 ; 11.903 ; Fall       ; clock           ;
+;  R3[4]         ; clock      ; 11.961 ; 11.961 ; Fall       ; clock           ;
+;  R3[5]         ; clock      ; 11.944 ; 11.944 ; Fall       ; clock           ;
+;  R3[6]         ; clock      ; 12.257 ; 12.257 ; Fall       ; clock           ;
+;  R3[7]         ; clock      ; 11.947 ; 11.947 ; Fall       ; clock           ;
+; R4[*]          ; clock      ; 12.612 ; 12.612 ; Fall       ; clock           ;
+;  R4[0]         ; clock      ; 11.403 ; 11.403 ; Fall       ; clock           ;
+;  R4[1]         ; clock      ; 12.612 ; 12.612 ; Fall       ; clock           ;
+;  R4[2]         ; clock      ; 12.330 ; 12.330 ; Fall       ; clock           ;
+;  R4[3]         ; clock      ; 11.868 ; 11.868 ; Fall       ; clock           ;
+;  R4[4]         ; clock      ; 12.260 ; 12.260 ; Fall       ; clock           ;
+;  R4[5]         ; clock      ; 12.330 ; 12.330 ; Fall       ; clock           ;
+;  R4[6]         ; clock      ; 12.262 ; 12.262 ; Fall       ; clock           ;
+;  R4[7]         ; clock      ; 12.253 ; 12.253 ; Fall       ; clock           ;
+; R5[*]          ; clock      ; 12.624 ; 12.624 ; Fall       ; clock           ;
+;  R5[0]         ; clock      ; 11.443 ; 11.443 ; Fall       ; clock           ;
+;  R5[1]         ; clock      ; 11.927 ; 11.927 ; Fall       ; clock           ;
+;  R5[2]         ; clock      ; 12.624 ; 12.624 ; Fall       ; clock           ;
+;  R5[3]         ; clock      ; 11.736 ; 11.736 ; Fall       ; clock           ;
+;  R5[4]         ; clock      ; 12.025 ; 12.025 ; Fall       ; clock           ;
+;  R5[5]         ; clock      ; 11.649 ; 11.649 ; Fall       ; clock           ;
+;  R5[6]         ; clock      ; 11.585 ; 11.585 ; Fall       ; clock           ;
+;  R5[7]         ; clock      ; 11.378 ; 11.378 ; Fall       ; clock           ;
+; load           ; clock      ; 9.534  ; 9.534  ; Fall       ; clock           ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; BusInterno[*]  ; clock      ; 11.635 ; 11.635 ; Rise       ; clock           ;
+;  BusInterno[0] ; clock      ; 12.432 ; 12.432 ; Rise       ; clock           ;
+;  BusInterno[1] ; clock      ; 12.434 ; 12.434 ; Rise       ; clock           ;
+;  BusInterno[2] ; clock      ; 11.635 ; 11.635 ; Rise       ; clock           ;
+;  BusInterno[3] ; clock      ; 11.758 ; 11.758 ; Rise       ; clock           ;
+;  BusInterno[4] ; clock      ; 11.823 ; 11.823 ; Rise       ; clock           ;
+;  BusInterno[5] ; clock      ; 12.705 ; 12.705 ; Rise       ; clock           ;
+;  BusInterno[6] ; clock      ; 12.090 ; 12.090 ; Rise       ; clock           ;
+;  BusInterno[7] ; clock      ; 12.223 ; 12.223 ; Rise       ; clock           ;
+; Cout           ; clock      ; 13.590 ; 13.590 ; Rise       ; clock           ;
+; OperandoA[*]   ; clock      ; 12.509 ; 12.509 ; Rise       ; clock           ;
+;  OperandoA[0]  ; clock      ; 13.956 ; 13.956 ; Rise       ; clock           ;
+;  OperandoA[1]  ; clock      ; 13.154 ; 13.154 ; Rise       ; clock           ;
+;  OperandoA[2]  ; clock      ; 12.612 ; 12.612 ; Rise       ; clock           ;
+;  OperandoA[3]  ; clock      ; 13.023 ; 13.023 ; Rise       ; clock           ;
+;  OperandoA[4]  ; clock      ; 12.883 ; 12.883 ; Rise       ; clock           ;
+;  OperandoA[5]  ; clock      ; 13.431 ; 13.431 ; Rise       ; clock           ;
+;  OperandoA[6]  ; clock      ; 13.181 ; 13.181 ; Rise       ; clock           ;
+;  OperandoA[7]  ; clock      ; 12.509 ; 12.509 ; Rise       ; clock           ;
+; OperandoB[*]   ; clock      ; 12.496 ; 12.496 ; Rise       ; clock           ;
+;  OperandoB[0]  ; clock      ; 12.855 ; 12.855 ; Rise       ; clock           ;
+;  OperandoB[1]  ; clock      ; 12.687 ; 12.687 ; Rise       ; clock           ;
+;  OperandoB[2]  ; clock      ; 12.496 ; 12.496 ; Rise       ; clock           ;
+;  OperandoB[3]  ; clock      ; 12.990 ; 12.990 ; Rise       ; clock           ;
+;  OperandoB[4]  ; clock      ; 12.869 ; 12.869 ; Rise       ; clock           ;
+;  OperandoB[5]  ; clock      ; 13.007 ; 13.007 ; Rise       ; clock           ;
+;  OperandoB[6]  ; clock      ; 13.588 ; 13.588 ; Rise       ; clock           ;
+;  OperandoB[7]  ; clock      ; 12.859 ; 12.859 ; Rise       ; clock           ;
+; OutALU[*]      ; clock      ; 11.523 ; 11.523 ; Rise       ; clock           ;
+;  OutALU[0]     ; clock      ; 12.513 ; 12.513 ; Rise       ; clock           ;
+;  OutALU[1]     ; clock      ; 11.559 ; 11.559 ; Rise       ; clock           ;
+;  OutALU[2]     ; clock      ; 11.523 ; 11.523 ; Rise       ; clock           ;
+;  OutALU[3]     ; clock      ; 13.614 ; 13.614 ; Rise       ; clock           ;
+;  OutALU[4]     ; clock      ; 12.437 ; 12.437 ; Rise       ; clock           ;
+;  OutALU[5]     ; clock      ; 12.529 ; 12.529 ; Rise       ; clock           ;
+;  OutALU[6]     ; clock      ; 13.251 ; 13.251 ; Rise       ; clock           ;
+;  OutALU[7]     ; clock      ; 13.149 ; 13.149 ; Rise       ; clock           ;
+; addres[*]      ; clock      ; 8.377  ; 8.377  ; Rise       ; clock           ;
+;  addres[0]     ; clock      ; 9.154  ; 9.154  ; Rise       ; clock           ;
+;  addres[1]     ; clock      ; 8.945  ; 8.945  ; Rise       ; clock           ;
+;  addres[2]     ; clock      ; 8.545  ; 8.545  ; Rise       ; clock           ;
+;  addres[3]     ; clock      ; 8.377  ; 8.377  ; Rise       ; clock           ;
+; load           ; clock      ; 9.534  ; 9.534  ; Rise       ; clock           ;
+; BusInterno[*]  ; clock      ; 13.013 ; 13.013 ; Fall       ; clock           ;
+;  BusInterno[0] ; clock      ; 14.215 ; 14.215 ; Fall       ; clock           ;
+;  BusInterno[1] ; clock      ; 13.637 ; 13.637 ; Fall       ; clock           ;
+;  BusInterno[2] ; clock      ; 13.482 ; 13.482 ; Fall       ; clock           ;
+;  BusInterno[3] ; clock      ; 13.616 ; 13.616 ; Fall       ; clock           ;
+;  BusInterno[4] ; clock      ; 13.013 ; 13.013 ; Fall       ; clock           ;
+;  BusInterno[5] ; clock      ; 13.540 ; 13.540 ; Fall       ; clock           ;
+;  BusInterno[6] ; clock      ; 14.057 ; 14.057 ; Fall       ; clock           ;
+;  BusInterno[7] ; clock      ; 13.132 ; 13.132 ; Fall       ; clock           ;
+; Cout           ; clock      ; 14.405 ; 14.405 ; Fall       ; clock           ;
+; OperandoA[*]   ; clock      ; 12.282 ; 12.282 ; Fall       ; clock           ;
+;  OperandoA[0]  ; clock      ; 13.797 ; 13.797 ; Fall       ; clock           ;
+;  OperandoA[1]  ; clock      ; 13.048 ; 13.048 ; Fall       ; clock           ;
+;  OperandoA[2]  ; clock      ; 12.282 ; 12.282 ; Fall       ; clock           ;
+;  OperandoA[3]  ; clock      ; 13.428 ; 13.428 ; Fall       ; clock           ;
+;  OperandoA[4]  ; clock      ; 12.815 ; 12.815 ; Fall       ; clock           ;
+;  OperandoA[5]  ; clock      ; 13.102 ; 13.102 ; Fall       ; clock           ;
+;  OperandoA[6]  ; clock      ; 13.009 ; 13.009 ; Fall       ; clock           ;
+;  OperandoA[7]  ; clock      ; 12.726 ; 12.726 ; Fall       ; clock           ;
+; OperandoB[*]   ; clock      ; 12.260 ; 12.260 ; Fall       ; clock           ;
+;  OperandoB[0]  ; clock      ; 12.614 ; 12.614 ; Fall       ; clock           ;
+;  OperandoB[1]  ; clock      ; 12.260 ; 12.260 ; Fall       ; clock           ;
+;  OperandoB[2]  ; clock      ; 12.757 ; 12.757 ; Fall       ; clock           ;
+;  OperandoB[3]  ; clock      ; 13.675 ; 13.675 ; Fall       ; clock           ;
+;  OperandoB[4]  ; clock      ; 12.486 ; 12.486 ; Fall       ; clock           ;
+;  OperandoB[5]  ; clock      ; 12.851 ; 12.851 ; Fall       ; clock           ;
+;  OperandoB[6]  ; clock      ; 13.501 ; 13.501 ; Fall       ; clock           ;
+;  OperandoB[7]  ; clock      ; 12.447 ; 12.447 ; Fall       ; clock           ;
+; OutALU[*]      ; clock      ; 13.364 ; 13.364 ; Fall       ; clock           ;
+;  OutALU[0]     ; clock      ; 14.296 ; 14.296 ; Fall       ; clock           ;
+;  OutALU[1]     ; clock      ; 13.956 ; 13.956 ; Fall       ; clock           ;
+;  OutALU[2]     ; clock      ; 13.994 ; 13.994 ; Fall       ; clock           ;
+;  OutALU[3]     ; clock      ; 14.679 ; 14.679 ; Fall       ; clock           ;
+;  OutALU[4]     ; clock      ; 13.953 ; 13.953 ; Fall       ; clock           ;
+;  OutALU[5]     ; clock      ; 13.364 ; 13.364 ; Fall       ; clock           ;
+;  OutALU[6]     ; clock      ; 14.505 ; 14.505 ; Fall       ; clock           ;
+;  OutALU[7]     ; clock      ; 14.123 ; 14.123 ; Fall       ; clock           ;
+; R0[*]          ; clock      ; 10.841 ; 10.841 ; Fall       ; clock           ;
+;  R0[0]         ; clock      ; 11.537 ; 11.537 ; Fall       ; clock           ;
+;  R0[1]         ; clock      ; 10.913 ; 10.913 ; Fall       ; clock           ;
+;  R0[2]         ; clock      ; 11.675 ; 11.675 ; Fall       ; clock           ;
+;  R0[3]         ; clock      ; 11.257 ; 11.257 ; Fall       ; clock           ;
+;  R0[4]         ; clock      ; 11.505 ; 11.505 ; Fall       ; clock           ;
+;  R0[5]         ; clock      ; 10.926 ; 10.926 ; Fall       ; clock           ;
+;  R0[6]         ; clock      ; 11.305 ; 11.305 ; Fall       ; clock           ;
+;  R0[7]         ; clock      ; 10.841 ; 10.841 ; Fall       ; clock           ;
+; R1[*]          ; clock      ; 11.737 ; 11.737 ; Fall       ; clock           ;
+;  R1[0]         ; clock      ; 12.278 ; 12.278 ; Fall       ; clock           ;
+;  R1[1]         ; clock      ; 12.584 ; 12.584 ; Fall       ; clock           ;
+;  R1[2]         ; clock      ; 12.273 ; 12.273 ; Fall       ; clock           ;
+;  R1[3]         ; clock      ; 11.860 ; 11.860 ; Fall       ; clock           ;
+;  R1[4]         ; clock      ; 12.303 ; 12.303 ; Fall       ; clock           ;
+;  R1[5]         ; clock      ; 12.064 ; 12.064 ; Fall       ; clock           ;
+;  R1[6]         ; clock      ; 12.451 ; 12.451 ; Fall       ; clock           ;
+;  R1[7]         ; clock      ; 11.737 ; 11.737 ; Fall       ; clock           ;
+; R2[*]          ; clock      ; 12.335 ; 12.335 ; Fall       ; clock           ;
+;  R2[0]         ; clock      ; 12.791 ; 12.791 ; Fall       ; clock           ;
+;  R2[1]         ; clock      ; 12.728 ; 12.728 ; Fall       ; clock           ;
+;  R2[2]         ; clock      ; 13.192 ; 13.192 ; Fall       ; clock           ;
+;  R2[3]         ; clock      ; 12.571 ; 12.571 ; Fall       ; clock           ;
+;  R2[4]         ; clock      ; 12.621 ; 12.621 ; Fall       ; clock           ;
+;  R2[5]         ; clock      ; 12.335 ; 12.335 ; Fall       ; clock           ;
+;  R2[6]         ; clock      ; 12.773 ; 12.773 ; Fall       ; clock           ;
+;  R2[7]         ; clock      ; 12.356 ; 12.356 ; Fall       ; clock           ;
+; R3[*]          ; clock      ; 11.903 ; 11.903 ; Fall       ; clock           ;
+;  R3[0]         ; clock      ; 12.725 ; 12.725 ; Fall       ; clock           ;
+;  R3[1]         ; clock      ; 12.408 ; 12.408 ; Fall       ; clock           ;
+;  R3[2]         ; clock      ; 12.097 ; 12.097 ; Fall       ; clock           ;
+;  R3[3]         ; clock      ; 11.903 ; 11.903 ; Fall       ; clock           ;
+;  R3[4]         ; clock      ; 11.961 ; 11.961 ; Fall       ; clock           ;
+;  R3[5]         ; clock      ; 11.944 ; 11.944 ; Fall       ; clock           ;
+;  R3[6]         ; clock      ; 12.257 ; 12.257 ; Fall       ; clock           ;
+;  R3[7]         ; clock      ; 11.947 ; 11.947 ; Fall       ; clock           ;
+; R4[*]          ; clock      ; 11.403 ; 11.403 ; Fall       ; clock           ;
+;  R4[0]         ; clock      ; 11.403 ; 11.403 ; Fall       ; clock           ;
+;  R4[1]         ; clock      ; 12.612 ; 12.612 ; Fall       ; clock           ;
+;  R4[2]         ; clock      ; 12.330 ; 12.330 ; Fall       ; clock           ;
+;  R4[3]         ; clock      ; 11.868 ; 11.868 ; Fall       ; clock           ;
+;  R4[4]         ; clock      ; 12.260 ; 12.260 ; Fall       ; clock           ;
+;  R4[5]         ; clock      ; 12.330 ; 12.330 ; Fall       ; clock           ;
+;  R4[6]         ; clock      ; 12.262 ; 12.262 ; Fall       ; clock           ;
+;  R4[7]         ; clock      ; 12.253 ; 12.253 ; Fall       ; clock           ;
+; R5[*]          ; clock      ; 11.378 ; 11.378 ; Fall       ; clock           ;
+;  R5[0]         ; clock      ; 11.443 ; 11.443 ; Fall       ; clock           ;
+;  R5[1]         ; clock      ; 11.927 ; 11.927 ; Fall       ; clock           ;
+;  R5[2]         ; clock      ; 12.624 ; 12.624 ; Fall       ; clock           ;
+;  R5[3]         ; clock      ; 11.736 ; 11.736 ; Fall       ; clock           ;
+;  R5[4]         ; clock      ; 12.025 ; 12.025 ; Fall       ; clock           ;
+;  R5[5]         ; clock      ; 11.649 ; 11.649 ; Fall       ; clock           ;
+;  R5[6]         ; clock      ; 11.585 ; 11.585 ; Fall       ; clock           ;
+;  R5[7]         ; clock      ; 11.378 ; 11.378 ; Fall       ; clock           ;
+; load           ; clock      ; 9.534  ; 9.534  ; Fall       ; clock           ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -2.314 ; -83.823       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.224 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.000 ; -21.256               ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; BusInterno[*]  ; clock      ; 7.103 ; 7.103 ; Rise       ; clock           ;
+;  BusInterno[0] ; clock      ; 6.491 ; 6.491 ; Rise       ; clock           ;
+;  BusInterno[1] ; clock      ; 6.452 ; 6.452 ; Rise       ; clock           ;
+;  BusInterno[2] ; clock      ; 6.496 ; 6.496 ; Rise       ; clock           ;
+;  BusInterno[3] ; clock      ; 6.423 ; 6.423 ; Rise       ; clock           ;
+;  BusInterno[4] ; clock      ; 6.749 ; 6.749 ; Rise       ; clock           ;
+;  BusInterno[5] ; clock      ; 7.103 ; 7.103 ; Rise       ; clock           ;
+;  BusInterno[6] ; clock      ; 6.751 ; 6.751 ; Rise       ; clock           ;
+;  BusInterno[7] ; clock      ; 6.778 ; 6.778 ; Rise       ; clock           ;
+; Cout           ; clock      ; 7.653 ; 7.653 ; Rise       ; clock           ;
+; OperandoA[*]   ; clock      ; 6.116 ; 6.116 ; Rise       ; clock           ;
+;  OperandoA[0]  ; clock      ; 6.116 ; 6.116 ; Rise       ; clock           ;
+;  OperandoA[1]  ; clock      ; 6.003 ; 6.003 ; Rise       ; clock           ;
+;  OperandoA[2]  ; clock      ; 5.703 ; 5.703 ; Rise       ; clock           ;
+;  OperandoA[3]  ; clock      ; 5.889 ; 5.889 ; Rise       ; clock           ;
+;  OperandoA[4]  ; clock      ; 5.789 ; 5.789 ; Rise       ; clock           ;
+;  OperandoA[5]  ; clock      ; 6.072 ; 6.072 ; Rise       ; clock           ;
+;  OperandoA[6]  ; clock      ; 6.006 ; 6.006 ; Rise       ; clock           ;
+;  OperandoA[7]  ; clock      ; 5.657 ; 5.657 ; Rise       ; clock           ;
+; OperandoB[*]   ; clock      ; 5.958 ; 5.958 ; Rise       ; clock           ;
+;  OperandoB[0]  ; clock      ; 5.819 ; 5.819 ; Rise       ; clock           ;
+;  OperandoB[1]  ; clock      ; 5.750 ; 5.750 ; Rise       ; clock           ;
+;  OperandoB[2]  ; clock      ; 5.636 ; 5.636 ; Rise       ; clock           ;
+;  OperandoB[3]  ; clock      ; 5.950 ; 5.950 ; Rise       ; clock           ;
+;  OperandoB[4]  ; clock      ; 5.944 ; 5.944 ; Rise       ; clock           ;
+;  OperandoB[5]  ; clock      ; 5.796 ; 5.796 ; Rise       ; clock           ;
+;  OperandoB[6]  ; clock      ; 5.958 ; 5.958 ; Rise       ; clock           ;
+;  OperandoB[7]  ; clock      ; 5.791 ; 5.791 ; Rise       ; clock           ;
+; OutALU[*]      ; clock      ; 7.222 ; 7.222 ; Rise       ; clock           ;
+;  OutALU[0]     ; clock      ; 6.532 ; 6.532 ; Rise       ; clock           ;
+;  OutALU[1]     ; clock      ; 6.519 ; 6.519 ; Rise       ; clock           ;
+;  OutALU[2]     ; clock      ; 6.697 ; 6.697 ; Rise       ; clock           ;
+;  OutALU[3]     ; clock      ; 6.819 ; 6.819 ; Rise       ; clock           ;
+;  OutALU[4]     ; clock      ; 7.066 ; 7.066 ; Rise       ; clock           ;
+;  OutALU[5]     ; clock      ; 7.041 ; 7.041 ; Rise       ; clock           ;
+;  OutALU[6]     ; clock      ; 6.928 ; 6.928 ; Rise       ; clock           ;
+;  OutALU[7]     ; clock      ; 7.222 ; 7.222 ; Rise       ; clock           ;
+; addres[*]      ; clock      ; 3.858 ; 3.858 ; Rise       ; clock           ;
+;  addres[0]     ; clock      ; 3.858 ; 3.858 ; Rise       ; clock           ;
+;  addres[1]     ; clock      ; 3.793 ; 3.793 ; Rise       ; clock           ;
+;  addres[2]     ; clock      ; 3.652 ; 3.652 ; Rise       ; clock           ;
+;  addres[3]     ; clock      ; 3.596 ; 3.596 ; Rise       ; clock           ;
+; load           ; clock      ; 4.108 ; 4.108 ; Rise       ; clock           ;
+; BusInterno[*]  ; clock      ; 7.325 ; 7.325 ; Fall       ; clock           ;
+;  BusInterno[0] ; clock      ; 6.671 ; 6.671 ; Fall       ; clock           ;
+;  BusInterno[1] ; clock      ; 6.632 ; 6.632 ; Fall       ; clock           ;
+;  BusInterno[2] ; clock      ; 6.735 ; 6.735 ; Fall       ; clock           ;
+;  BusInterno[3] ; clock      ; 6.662 ; 6.662 ; Fall       ; clock           ;
+;  BusInterno[4] ; clock      ; 6.971 ; 6.971 ; Fall       ; clock           ;
+;  BusInterno[5] ; clock      ; 7.325 ; 7.325 ; Fall       ; clock           ;
+;  BusInterno[6] ; clock      ; 6.973 ; 6.973 ; Fall       ; clock           ;
+;  BusInterno[7] ; clock      ; 6.995 ; 6.995 ; Fall       ; clock           ;
+; Cout           ; clock      ; 7.797 ; 7.797 ; Fall       ; clock           ;
+; OperandoA[*]   ; clock      ; 6.284 ; 6.284 ; Fall       ; clock           ;
+;  OperandoA[0]  ; clock      ; 6.274 ; 6.274 ; Fall       ; clock           ;
+;  OperandoA[1]  ; clock      ; 6.284 ; 6.284 ; Fall       ; clock           ;
+;  OperandoA[2]  ; clock      ; 5.754 ; 5.754 ; Fall       ; clock           ;
+;  OperandoA[3]  ; clock      ; 5.964 ; 5.964 ; Fall       ; clock           ;
+;  OperandoA[4]  ; clock      ; 5.869 ; 5.869 ; Fall       ; clock           ;
+;  OperandoA[5]  ; clock      ; 6.019 ; 6.019 ; Fall       ; clock           ;
+;  OperandoA[6]  ; clock      ; 6.174 ; 6.174 ; Fall       ; clock           ;
+;  OperandoA[7]  ; clock      ; 5.801 ; 5.801 ; Fall       ; clock           ;
+; OperandoB[*]   ; clock      ; 6.352 ; 6.352 ; Fall       ; clock           ;
+;  OperandoB[0]  ; clock      ; 6.049 ; 6.049 ; Fall       ; clock           ;
+;  OperandoB[1]  ; clock      ; 5.937 ; 5.937 ; Fall       ; clock           ;
+;  OperandoB[2]  ; clock      ; 5.993 ; 5.993 ; Fall       ; clock           ;
+;  OperandoB[3]  ; clock      ; 6.328 ; 6.328 ; Fall       ; clock           ;
+;  OperandoB[4]  ; clock      ; 6.065 ; 6.065 ; Fall       ; clock           ;
+;  OperandoB[5]  ; clock      ; 6.165 ; 6.165 ; Fall       ; clock           ;
+;  OperandoB[6]  ; clock      ; 6.352 ; 6.352 ; Fall       ; clock           ;
+;  OperandoB[7]  ; clock      ; 6.115 ; 6.115 ; Fall       ; clock           ;
+; OutALU[*]      ; clock      ; 7.439 ; 7.439 ; Fall       ; clock           ;
+;  OutALU[0]     ; clock      ; 6.712 ; 6.712 ; Fall       ; clock           ;
+;  OutALU[1]     ; clock      ; 6.710 ; 6.710 ; Fall       ; clock           ;
+;  OutALU[2]     ; clock      ; 6.946 ; 6.946 ; Fall       ; clock           ;
+;  OutALU[3]     ; clock      ; 7.058 ; 7.058 ; Fall       ; clock           ;
+;  OutALU[4]     ; clock      ; 7.288 ; 7.288 ; Fall       ; clock           ;
+;  OutALU[5]     ; clock      ; 7.263 ; 7.263 ; Fall       ; clock           ;
+;  OutALU[6]     ; clock      ; 7.150 ; 7.150 ; Fall       ; clock           ;
+;  OutALU[7]     ; clock      ; 7.439 ; 7.439 ; Fall       ; clock           ;
+; R0[*]          ; clock      ; 4.923 ; 4.923 ; Fall       ; clock           ;
+;  R0[0]         ; clock      ; 4.923 ; 4.923 ; Fall       ; clock           ;
+;  R0[1]         ; clock      ; 4.604 ; 4.604 ; Fall       ; clock           ;
+;  R0[2]         ; clock      ; 4.891 ; 4.891 ; Fall       ; clock           ;
+;  R0[3]         ; clock      ; 4.721 ; 4.721 ; Fall       ; clock           ;
+;  R0[4]         ; clock      ; 4.893 ; 4.893 ; Fall       ; clock           ;
+;  R0[5]         ; clock      ; 4.612 ; 4.612 ; Fall       ; clock           ;
+;  R0[6]         ; clock      ; 4.766 ; 4.766 ; Fall       ; clock           ;
+;  R0[7]         ; clock      ; 4.582 ; 4.582 ; Fall       ; clock           ;
+; R1[*]          ; clock      ; 5.391 ; 5.391 ; Fall       ; clock           ;
+;  R1[0]         ; clock      ; 5.282 ; 5.282 ; Fall       ; clock           ;
+;  R1[1]         ; clock      ; 5.391 ; 5.391 ; Fall       ; clock           ;
+;  R1[2]         ; clock      ; 5.274 ; 5.274 ; Fall       ; clock           ;
+;  R1[3]         ; clock      ; 5.137 ; 5.137 ; Fall       ; clock           ;
+;  R1[4]         ; clock      ; 5.293 ; 5.293 ; Fall       ; clock           ;
+;  R1[5]         ; clock      ; 5.190 ; 5.190 ; Fall       ; clock           ;
+;  R1[6]         ; clock      ; 5.360 ; 5.360 ; Fall       ; clock           ;
+;  R1[7]         ; clock      ; 5.057 ; 5.057 ; Fall       ; clock           ;
+; R2[*]          ; clock      ; 5.588 ; 5.588 ; Fall       ; clock           ;
+;  R2[0]         ; clock      ; 5.483 ; 5.483 ; Fall       ; clock           ;
+;  R2[1]         ; clock      ; 5.464 ; 5.464 ; Fall       ; clock           ;
+;  R2[2]         ; clock      ; 5.588 ; 5.588 ; Fall       ; clock           ;
+;  R2[3]         ; clock      ; 5.381 ; 5.381 ; Fall       ; clock           ;
+;  R2[4]         ; clock      ; 5.409 ; 5.409 ; Fall       ; clock           ;
+;  R2[5]         ; clock      ; 5.313 ; 5.313 ; Fall       ; clock           ;
+;  R2[6]         ; clock      ; 5.483 ; 5.483 ; Fall       ; clock           ;
+;  R2[7]         ; clock      ; 5.292 ; 5.292 ; Fall       ; clock           ;
+; R3[*]          ; clock      ; 5.245 ; 5.245 ; Fall       ; clock           ;
+;  R3[0]         ; clock      ; 5.245 ; 5.245 ; Fall       ; clock           ;
+;  R3[1]         ; clock      ; 5.178 ; 5.178 ; Fall       ; clock           ;
+;  R3[2]         ; clock      ; 5.076 ; 5.076 ; Fall       ; clock           ;
+;  R3[3]         ; clock      ; 4.986 ; 4.986 ; Fall       ; clock           ;
+;  R3[4]         ; clock      ; 4.996 ; 4.996 ; Fall       ; clock           ;
+;  R3[5]         ; clock      ; 4.991 ; 4.991 ; Fall       ; clock           ;
+;  R3[6]         ; clock      ; 5.112 ; 5.112 ; Fall       ; clock           ;
+;  R3[7]         ; clock      ; 4.997 ; 4.997 ; Fall       ; clock           ;
+; R4[*]          ; clock      ; 5.429 ; 5.429 ; Fall       ; clock           ;
+;  R4[0]         ; clock      ; 4.988 ; 4.988 ; Fall       ; clock           ;
+;  R4[1]         ; clock      ; 5.429 ; 5.429 ; Fall       ; clock           ;
+;  R4[2]         ; clock      ; 5.326 ; 5.326 ; Fall       ; clock           ;
+;  R4[3]         ; clock      ; 5.165 ; 5.165 ; Fall       ; clock           ;
+;  R4[4]         ; clock      ; 5.286 ; 5.286 ; Fall       ; clock           ;
+;  R4[5]         ; clock      ; 5.334 ; 5.334 ; Fall       ; clock           ;
+;  R4[6]         ; clock      ; 5.299 ; 5.299 ; Fall       ; clock           ;
+;  R4[7]         ; clock      ; 5.307 ; 5.307 ; Fall       ; clock           ;
+; R5[*]          ; clock      ; 5.201 ; 5.201 ; Fall       ; clock           ;
+;  R5[0]         ; clock      ; 4.808 ; 4.808 ; Fall       ; clock           ;
+;  R5[1]         ; clock      ; 4.990 ; 4.990 ; Fall       ; clock           ;
+;  R5[2]         ; clock      ; 5.201 ; 5.201 ; Fall       ; clock           ;
+;  R5[3]         ; clock      ; 4.912 ; 4.912 ; Fall       ; clock           ;
+;  R5[4]         ; clock      ; 5.035 ; 5.035 ; Fall       ; clock           ;
+;  R5[5]         ; clock      ; 4.909 ; 4.909 ; Fall       ; clock           ;
+;  R5[6]         ; clock      ; 4.878 ; 4.878 ; Fall       ; clock           ;
+;  R5[7]         ; clock      ; 4.772 ; 4.772 ; Fall       ; clock           ;
+; load           ; clock      ; 4.108 ; 4.108 ; Fall       ; clock           ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; BusInterno[*]  ; clock      ; 5.040 ; 5.040 ; Rise       ; clock           ;
+;  BusInterno[0] ; clock      ; 5.344 ; 5.344 ; Rise       ; clock           ;
+;  BusInterno[1] ; clock      ; 5.334 ; 5.334 ; Rise       ; clock           ;
+;  BusInterno[2] ; clock      ; 5.040 ; 5.040 ; Rise       ; clock           ;
+;  BusInterno[3] ; clock      ; 5.116 ; 5.116 ; Rise       ; clock           ;
+;  BusInterno[4] ; clock      ; 5.159 ; 5.159 ; Rise       ; clock           ;
+;  BusInterno[5] ; clock      ; 5.481 ; 5.481 ; Rise       ; clock           ;
+;  BusInterno[6] ; clock      ; 5.201 ; 5.201 ; Rise       ; clock           ;
+;  BusInterno[7] ; clock      ; 5.259 ; 5.259 ; Rise       ; clock           ;
+; Cout           ; clock      ; 5.786 ; 5.786 ; Rise       ; clock           ;
+; OperandoA[*]   ; clock      ; 5.418 ; 5.418 ; Rise       ; clock           ;
+;  OperandoA[0]  ; clock      ; 5.887 ; 5.887 ; Rise       ; clock           ;
+;  OperandoA[1]  ; clock      ; 5.683 ; 5.683 ; Rise       ; clock           ;
+;  OperandoA[2]  ; clock      ; 5.440 ; 5.440 ; Rise       ; clock           ;
+;  OperandoA[3]  ; clock      ; 5.598 ; 5.598 ; Rise       ; clock           ;
+;  OperandoA[4]  ; clock      ; 5.558 ; 5.558 ; Rise       ; clock           ;
+;  OperandoA[5]  ; clock      ; 5.774 ; 5.774 ; Rise       ; clock           ;
+;  OperandoA[6]  ; clock      ; 5.684 ; 5.684 ; Rise       ; clock           ;
+;  OperandoA[7]  ; clock      ; 5.418 ; 5.418 ; Rise       ; clock           ;
+; OperandoB[*]   ; clock      ; 5.404 ; 5.404 ; Rise       ; clock           ;
+;  OperandoB[0]  ; clock      ; 5.515 ; 5.515 ; Rise       ; clock           ;
+;  OperandoB[1]  ; clock      ; 5.473 ; 5.473 ; Rise       ; clock           ;
+;  OperandoB[2]  ; clock      ; 5.404 ; 5.404 ; Rise       ; clock           ;
+;  OperandoB[3]  ; clock      ; 5.605 ; 5.605 ; Rise       ; clock           ;
+;  OperandoB[4]  ; clock      ; 5.554 ; 5.554 ; Rise       ; clock           ;
+;  OperandoB[5]  ; clock      ; 5.629 ; 5.629 ; Rise       ; clock           ;
+;  OperandoB[6]  ; clock      ; 5.794 ; 5.794 ; Rise       ; clock           ;
+;  OperandoB[7]  ; clock      ; 5.524 ; 5.524 ; Rise       ; clock           ;
+; OutALU[*]      ; clock      ; 5.056 ; 5.056 ; Rise       ; clock           ;
+;  OutALU[0]     ; clock      ; 5.385 ; 5.385 ; Rise       ; clock           ;
+;  OutALU[1]     ; clock      ; 5.056 ; 5.056 ; Rise       ; clock           ;
+;  OutALU[2]     ; clock      ; 5.058 ; 5.058 ; Rise       ; clock           ;
+;  OutALU[3]     ; clock      ; 5.818 ; 5.818 ; Rise       ; clock           ;
+;  OutALU[4]     ; clock      ; 5.386 ; 5.386 ; Rise       ; clock           ;
+;  OutALU[5]     ; clock      ; 5.419 ; 5.419 ; Rise       ; clock           ;
+;  OutALU[6]     ; clock      ; 5.659 ; 5.659 ; Rise       ; clock           ;
+;  OutALU[7]     ; clock      ; 5.609 ; 5.609 ; Rise       ; clock           ;
+; addres[*]      ; clock      ; 3.596 ; 3.596 ; Rise       ; clock           ;
+;  addres[0]     ; clock      ; 3.858 ; 3.858 ; Rise       ; clock           ;
+;  addres[1]     ; clock      ; 3.793 ; 3.793 ; Rise       ; clock           ;
+;  addres[2]     ; clock      ; 3.652 ; 3.652 ; Rise       ; clock           ;
+;  addres[3]     ; clock      ; 3.596 ; 3.596 ; Rise       ; clock           ;
+; load           ; clock      ; 4.108 ; 4.108 ; Rise       ; clock           ;
+; BusInterno[*]  ; clock      ; 5.403 ; 5.403 ; Fall       ; clock           ;
+;  BusInterno[0] ; clock      ; 5.854 ; 5.854 ; Fall       ; clock           ;
+;  BusInterno[1] ; clock      ; 5.628 ; 5.628 ; Fall       ; clock           ;
+;  BusInterno[2] ; clock      ; 5.572 ; 5.572 ; Fall       ; clock           ;
+;  BusInterno[3] ; clock      ; 5.643 ; 5.643 ; Fall       ; clock           ;
+;  BusInterno[4] ; clock      ; 5.403 ; 5.403 ; Fall       ; clock           ;
+;  BusInterno[5] ; clock      ; 5.593 ; 5.593 ; Fall       ; clock           ;
+;  BusInterno[6] ; clock      ; 5.772 ; 5.772 ; Fall       ; clock           ;
+;  BusInterno[7] ; clock      ; 5.465 ; 5.465 ; Fall       ; clock           ;
+; Cout           ; clock      ; 5.923 ; 5.923 ; Fall       ; clock           ;
+; OperandoA[*]   ; clock      ; 5.106 ; 5.106 ; Fall       ; clock           ;
+;  OperandoA[0]  ; clock      ; 5.643 ; 5.643 ; Fall       ; clock           ;
+;  OperandoA[1]  ; clock      ; 5.574 ; 5.574 ; Fall       ; clock           ;
+;  OperandoA[2]  ; clock      ; 5.106 ; 5.106 ; Fall       ; clock           ;
+;  OperandoA[3]  ; clock      ; 5.553 ; 5.553 ; Fall       ; clock           ;
+;  OperandoA[4]  ; clock      ; 5.294 ; 5.294 ; Fall       ; clock           ;
+;  OperandoA[5]  ; clock      ; 5.423 ; 5.423 ; Fall       ; clock           ;
+;  OperandoA[6]  ; clock      ; 5.400 ; 5.400 ; Fall       ; clock           ;
+;  OperandoA[7]  ; clock      ; 5.277 ; 5.277 ; Fall       ; clock           ;
+; OperandoB[*]   ; clock      ; 5.140 ; 5.140 ; Fall       ; clock           ;
+;  OperandoB[0]  ; clock      ; 5.270 ; 5.270 ; Fall       ; clock           ;
+;  OperandoB[1]  ; clock      ; 5.140 ; 5.140 ; Fall       ; clock           ;
+;  OperandoB[2]  ; clock      ; 5.295 ; 5.295 ; Fall       ; clock           ;
+;  OperandoB[3]  ; clock      ; 5.630 ; 5.630 ; Fall       ; clock           ;
+;  OperandoB[4]  ; clock      ; 5.233 ; 5.233 ; Fall       ; clock           ;
+;  OperandoB[5]  ; clock      ; 5.331 ; 5.331 ; Fall       ; clock           ;
+;  OperandoB[6]  ; clock      ; 5.522 ; 5.522 ; Fall       ; clock           ;
+;  OperandoB[7]  ; clock      ; 5.195 ; 5.195 ; Fall       ; clock           ;
+; OutALU[*]      ; clock      ; 5.531 ; 5.531 ; Fall       ; clock           ;
+;  OutALU[0]     ; clock      ; 5.895 ; 5.895 ; Fall       ; clock           ;
+;  OutALU[1]     ; clock      ; 5.761 ; 5.761 ; Fall       ; clock           ;
+;  OutALU[2]     ; clock      ; 5.793 ; 5.793 ; Fall       ; clock           ;
+;  OutALU[3]     ; clock      ; 6.010 ; 6.010 ; Fall       ; clock           ;
+;  OutALU[4]     ; clock      ; 5.786 ; 5.786 ; Fall       ; clock           ;
+;  OutALU[5]     ; clock      ; 5.531 ; 5.531 ; Fall       ; clock           ;
+;  OutALU[6]     ; clock      ; 5.949 ; 5.949 ; Fall       ; clock           ;
+;  OutALU[7]     ; clock      ; 5.783 ; 5.783 ; Fall       ; clock           ;
+; R0[*]          ; clock      ; 4.582 ; 4.582 ; Fall       ; clock           ;
+;  R0[0]         ; clock      ; 4.923 ; 4.923 ; Fall       ; clock           ;
+;  R0[1]         ; clock      ; 4.604 ; 4.604 ; Fall       ; clock           ;
+;  R0[2]         ; clock      ; 4.891 ; 4.891 ; Fall       ; clock           ;
+;  R0[3]         ; clock      ; 4.721 ; 4.721 ; Fall       ; clock           ;
+;  R0[4]         ; clock      ; 4.893 ; 4.893 ; Fall       ; clock           ;
+;  R0[5]         ; clock      ; 4.612 ; 4.612 ; Fall       ; clock           ;
+;  R0[6]         ; clock      ; 4.766 ; 4.766 ; Fall       ; clock           ;
+;  R0[7]         ; clock      ; 4.582 ; 4.582 ; Fall       ; clock           ;
+; R1[*]          ; clock      ; 5.057 ; 5.057 ; Fall       ; clock           ;
+;  R1[0]         ; clock      ; 5.282 ; 5.282 ; Fall       ; clock           ;
+;  R1[1]         ; clock      ; 5.391 ; 5.391 ; Fall       ; clock           ;
+;  R1[2]         ; clock      ; 5.274 ; 5.274 ; Fall       ; clock           ;
+;  R1[3]         ; clock      ; 5.137 ; 5.137 ; Fall       ; clock           ;
+;  R1[4]         ; clock      ; 5.293 ; 5.293 ; Fall       ; clock           ;
+;  R1[5]         ; clock      ; 5.190 ; 5.190 ; Fall       ; clock           ;
+;  R1[6]         ; clock      ; 5.360 ; 5.360 ; Fall       ; clock           ;
+;  R1[7]         ; clock      ; 5.057 ; 5.057 ; Fall       ; clock           ;
+; R2[*]          ; clock      ; 5.292 ; 5.292 ; Fall       ; clock           ;
+;  R2[0]         ; clock      ; 5.483 ; 5.483 ; Fall       ; clock           ;
+;  R2[1]         ; clock      ; 5.464 ; 5.464 ; Fall       ; clock           ;
+;  R2[2]         ; clock      ; 5.588 ; 5.588 ; Fall       ; clock           ;
+;  R2[3]         ; clock      ; 5.381 ; 5.381 ; Fall       ; clock           ;
+;  R2[4]         ; clock      ; 5.409 ; 5.409 ; Fall       ; clock           ;
+;  R2[5]         ; clock      ; 5.313 ; 5.313 ; Fall       ; clock           ;
+;  R2[6]         ; clock      ; 5.483 ; 5.483 ; Fall       ; clock           ;
+;  R2[7]         ; clock      ; 5.292 ; 5.292 ; Fall       ; clock           ;
+; R3[*]          ; clock      ; 4.986 ; 4.986 ; Fall       ; clock           ;
+;  R3[0]         ; clock      ; 5.245 ; 5.245 ; Fall       ; clock           ;
+;  R3[1]         ; clock      ; 5.178 ; 5.178 ; Fall       ; clock           ;
+;  R3[2]         ; clock      ; 5.076 ; 5.076 ; Fall       ; clock           ;
+;  R3[3]         ; clock      ; 4.986 ; 4.986 ; Fall       ; clock           ;
+;  R3[4]         ; clock      ; 4.996 ; 4.996 ; Fall       ; clock           ;
+;  R3[5]         ; clock      ; 4.991 ; 4.991 ; Fall       ; clock           ;
+;  R3[6]         ; clock      ; 5.112 ; 5.112 ; Fall       ; clock           ;
+;  R3[7]         ; clock      ; 4.997 ; 4.997 ; Fall       ; clock           ;
+; R4[*]          ; clock      ; 4.988 ; 4.988 ; Fall       ; clock           ;
+;  R4[0]         ; clock      ; 4.988 ; 4.988 ; Fall       ; clock           ;
+;  R4[1]         ; clock      ; 5.429 ; 5.429 ; Fall       ; clock           ;
+;  R4[2]         ; clock      ; 5.326 ; 5.326 ; Fall       ; clock           ;
+;  R4[3]         ; clock      ; 5.165 ; 5.165 ; Fall       ; clock           ;
+;  R4[4]         ; clock      ; 5.286 ; 5.286 ; Fall       ; clock           ;
+;  R4[5]         ; clock      ; 5.334 ; 5.334 ; Fall       ; clock           ;
+;  R4[6]         ; clock      ; 5.299 ; 5.299 ; Fall       ; clock           ;
+;  R4[7]         ; clock      ; 5.307 ; 5.307 ; Fall       ; clock           ;
+; R5[*]          ; clock      ; 4.772 ; 4.772 ; Fall       ; clock           ;
+;  R5[0]         ; clock      ; 4.808 ; 4.808 ; Fall       ; clock           ;
+;  R5[1]         ; clock      ; 4.990 ; 4.990 ; Fall       ; clock           ;
+;  R5[2]         ; clock      ; 5.201 ; 5.201 ; Fall       ; clock           ;
+;  R5[3]         ; clock      ; 4.912 ; 4.912 ; Fall       ; clock           ;
+;  R5[4]         ; clock      ; 5.035 ; 5.035 ; Fall       ; clock           ;
+;  R5[5]         ; clock      ; 4.909 ; 4.909 ; Fall       ; clock           ;
+;  R5[6]         ; clock      ; 4.878 ; 4.878 ; Fall       ; clock           ;
+;  R5[7]         ; clock      ; 4.772 ; 4.772 ; Fall       ; clock           ;
+; load           ; clock      ; 4.108 ; 4.108 ; Fall       ; clock           ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -6.860   ; 0.224 ; N/A      ; N/A     ; -1.675              ;
+;  clock           ; -6.860   ; 0.224 ; N/A      ; N/A     ; -1.675              ;
+; Design-wide TNS  ; -265.818 ; 0.0   ; 0.0      ; 0.0     ; -54.035             ;
+;  clock           ; -265.818 ; 0.000 ; N/A      ; N/A     ; -54.035             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; BusInterno[*]  ; clock      ; 17.005 ; 17.005 ; Rise       ; clock           ;
+;  BusInterno[0] ; clock      ; 15.585 ; 15.585 ; Rise       ; clock           ;
+;  BusInterno[1] ; clock      ; 15.547 ; 15.547 ; Rise       ; clock           ;
+;  BusInterno[2] ; clock      ; 15.640 ; 15.640 ; Rise       ; clock           ;
+;  BusInterno[3] ; clock      ; 15.400 ; 15.400 ; Rise       ; clock           ;
+;  BusInterno[4] ; clock      ; 16.024 ; 16.024 ; Rise       ; clock           ;
+;  BusInterno[5] ; clock      ; 17.005 ; 17.005 ; Rise       ; clock           ;
+;  BusInterno[6] ; clock      ; 16.078 ; 16.078 ; Rise       ; clock           ;
+;  BusInterno[7] ; clock      ; 16.186 ; 16.186 ; Rise       ; clock           ;
+; Cout           ; clock      ; 18.840 ; 18.840 ; Rise       ; clock           ;
+; OperandoA[*]   ; clock      ; 14.713 ; 14.713 ; Rise       ; clock           ;
+;  OperandoA[0]  ; clock      ; 14.713 ; 14.713 ; Rise       ; clock           ;
+;  OperandoA[1]  ; clock      ; 13.834 ; 13.834 ; Rise       ; clock           ;
+;  OperandoA[2]  ; clock      ; 13.410 ; 13.410 ; Rise       ; clock           ;
+;  OperandoA[3]  ; clock      ; 13.781 ; 13.781 ; Rise       ; clock           ;
+;  OperandoA[4]  ; clock      ; 13.727 ; 13.727 ; Rise       ; clock           ;
+;  OperandoA[5]  ; clock      ; 14.423 ; 14.423 ; Rise       ; clock           ;
+;  OperandoA[6]  ; clock      ; 14.060 ; 14.060 ; Rise       ; clock           ;
+;  OperandoA[7]  ; clock      ; 13.256 ; 13.256 ; Rise       ; clock           ;
+; OperandoB[*]   ; clock      ; 14.051 ; 14.051 ; Rise       ; clock           ;
+;  OperandoB[0]  ; clock      ; 13.620 ; 13.620 ; Rise       ; clock           ;
+;  OperandoB[1]  ; clock      ; 13.351 ; 13.351 ; Rise       ; clock           ;
+;  OperandoB[2]  ; clock      ; 13.123 ; 13.123 ; Rise       ; clock           ;
+;  OperandoB[3]  ; clock      ; 13.958 ; 13.958 ; Rise       ; clock           ;
+;  OperandoB[4]  ; clock      ; 13.905 ; 13.905 ; Rise       ; clock           ;
+;  OperandoB[5]  ; clock      ; 13.467 ; 13.467 ; Rise       ; clock           ;
+;  OperandoB[6]  ; clock      ; 14.051 ; 14.051 ; Rise       ; clock           ;
+;  OperandoB[7]  ; clock      ; 13.558 ; 13.558 ; Rise       ; clock           ;
+; OutALU[*]      ; clock      ; 17.463 ; 17.463 ; Rise       ; clock           ;
+;  OutALU[0]     ; clock      ; 15.666 ; 15.666 ; Rise       ; clock           ;
+;  OutALU[1]     ; clock      ; 15.685 ; 15.685 ; Rise       ; clock           ;
+;  OutALU[2]     ; clock      ; 16.139 ; 16.139 ; Rise       ; clock           ;
+;  OutALU[3]     ; clock      ; 16.477 ; 16.477 ; Rise       ; clock           ;
+;  OutALU[4]     ; clock      ; 16.873 ; 16.873 ; Rise       ; clock           ;
+;  OutALU[5]     ; clock      ; 16.829 ; 16.829 ; Rise       ; clock           ;
+;  OutALU[6]     ; clock      ; 16.526 ; 16.526 ; Rise       ; clock           ;
+;  OutALU[7]     ; clock      ; 17.463 ; 17.463 ; Rise       ; clock           ;
+; addres[*]      ; clock      ; 9.154  ; 9.154  ; Rise       ; clock           ;
+;  addres[0]     ; clock      ; 9.154  ; 9.154  ; Rise       ; clock           ;
+;  addres[1]     ; clock      ; 8.945  ; 8.945  ; Rise       ; clock           ;
+;  addres[2]     ; clock      ; 8.545  ; 8.545  ; Rise       ; clock           ;
+;  addres[3]     ; clock      ; 8.377  ; 8.377  ; Rise       ; clock           ;
+; load           ; clock      ; 9.534  ; 9.534  ; Rise       ; clock           ;
+; BusInterno[*]  ; clock      ; 17.979 ; 17.979 ; Fall       ; clock           ;
+;  BusInterno[0] ; clock      ; 15.920 ; 15.920 ; Fall       ; clock           ;
+;  BusInterno[1] ; clock      ; 15.884 ; 15.884 ; Fall       ; clock           ;
+;  BusInterno[2] ; clock      ; 16.090 ; 16.090 ; Fall       ; clock           ;
+;  BusInterno[3] ; clock      ; 15.850 ; 15.850 ; Fall       ; clock           ;
+;  BusInterno[4] ; clock      ; 16.998 ; 16.998 ; Fall       ; clock           ;
+;  BusInterno[5] ; clock      ; 17.979 ; 17.979 ; Fall       ; clock           ;
+;  BusInterno[6] ; clock      ; 17.052 ; 17.052 ; Fall       ; clock           ;
+;  BusInterno[7] ; clock      ; 17.160 ; 17.160 ; Fall       ; clock           ;
+; Cout           ; clock      ; 19.133 ; 19.133 ; Fall       ; clock           ;
+; OperandoA[*]   ; clock      ; 14.998 ; 14.998 ; Fall       ; clock           ;
+;  OperandoA[0]  ; clock      ; 14.998 ; 14.998 ; Fall       ; clock           ;
+;  OperandoA[1]  ; clock      ; 14.648 ; 14.648 ; Fall       ; clock           ;
+;  OperandoA[2]  ; clock      ; 13.522 ; 13.522 ; Fall       ; clock           ;
+;  OperandoA[3]  ; clock      ; 14.135 ; 14.135 ; Fall       ; clock           ;
+;  OperandoA[4]  ; clock      ; 13.809 ; 13.809 ; Fall       ; clock           ;
+;  OperandoA[5]  ; clock      ; 14.237 ; 14.237 ; Fall       ; clock           ;
+;  OperandoA[6]  ; clock      ; 14.437 ; 14.437 ; Fall       ; clock           ;
+;  OperandoA[7]  ; clock      ; 13.549 ; 13.549 ; Fall       ; clock           ;
+; OperandoB[*]   ; clock      ; 15.120 ; 15.120 ; Fall       ; clock           ;
+;  OperandoB[0]  ; clock      ; 14.265 ; 14.265 ; Fall       ; clock           ;
+;  OperandoB[1]  ; clock      ; 14.140 ; 14.140 ; Fall       ; clock           ;
+;  OperandoB[2]  ; clock      ; 14.180 ; 14.180 ; Fall       ; clock           ;
+;  OperandoB[3]  ; clock      ; 15.119 ; 15.119 ; Fall       ; clock           ;
+;  OperandoB[4]  ; clock      ; 14.441 ; 14.441 ; Fall       ; clock           ;
+;  OperandoB[5]  ; clock      ; 14.624 ; 14.624 ; Fall       ; clock           ;
+;  OperandoB[6]  ; clock      ; 15.120 ; 15.120 ; Fall       ; clock           ;
+;  OperandoB[7]  ; clock      ; 14.436 ; 14.436 ; Fall       ; clock           ;
+; OutALU[*]      ; clock      ; 18.371 ; 18.371 ; Fall       ; clock           ;
+;  OutALU[0]     ; clock      ; 16.001 ; 16.001 ; Fall       ; clock           ;
+;  OutALU[1]     ; clock      ; 16.063 ; 16.063 ; Fall       ; clock           ;
+;  OutALU[2]     ; clock      ; 16.659 ; 16.659 ; Fall       ; clock           ;
+;  OutALU[3]     ; clock      ; 16.992 ; 16.992 ; Fall       ; clock           ;
+;  OutALU[4]     ; clock      ; 17.847 ; 17.847 ; Fall       ; clock           ;
+;  OutALU[5]     ; clock      ; 17.803 ; 17.803 ; Fall       ; clock           ;
+;  OutALU[6]     ; clock      ; 17.500 ; 17.500 ; Fall       ; clock           ;
+;  OutALU[7]     ; clock      ; 18.371 ; 18.371 ; Fall       ; clock           ;
+; R0[*]          ; clock      ; 11.675 ; 11.675 ; Fall       ; clock           ;
+;  R0[0]         ; clock      ; 11.537 ; 11.537 ; Fall       ; clock           ;
+;  R0[1]         ; clock      ; 10.913 ; 10.913 ; Fall       ; clock           ;
+;  R0[2]         ; clock      ; 11.675 ; 11.675 ; Fall       ; clock           ;
+;  R0[3]         ; clock      ; 11.257 ; 11.257 ; Fall       ; clock           ;
+;  R0[4]         ; clock      ; 11.505 ; 11.505 ; Fall       ; clock           ;
+;  R0[5]         ; clock      ; 10.926 ; 10.926 ; Fall       ; clock           ;
+;  R0[6]         ; clock      ; 11.305 ; 11.305 ; Fall       ; clock           ;
+;  R0[7]         ; clock      ; 10.841 ; 10.841 ; Fall       ; clock           ;
+; R1[*]          ; clock      ; 12.584 ; 12.584 ; Fall       ; clock           ;
+;  R1[0]         ; clock      ; 12.278 ; 12.278 ; Fall       ; clock           ;
+;  R1[1]         ; clock      ; 12.584 ; 12.584 ; Fall       ; clock           ;
+;  R1[2]         ; clock      ; 12.273 ; 12.273 ; Fall       ; clock           ;
+;  R1[3]         ; clock      ; 11.860 ; 11.860 ; Fall       ; clock           ;
+;  R1[4]         ; clock      ; 12.303 ; 12.303 ; Fall       ; clock           ;
+;  R1[5]         ; clock      ; 12.064 ; 12.064 ; Fall       ; clock           ;
+;  R1[6]         ; clock      ; 12.451 ; 12.451 ; Fall       ; clock           ;
+;  R1[7]         ; clock      ; 11.737 ; 11.737 ; Fall       ; clock           ;
+; R2[*]          ; clock      ; 13.192 ; 13.192 ; Fall       ; clock           ;
+;  R2[0]         ; clock      ; 12.791 ; 12.791 ; Fall       ; clock           ;
+;  R2[1]         ; clock      ; 12.728 ; 12.728 ; Fall       ; clock           ;
+;  R2[2]         ; clock      ; 13.192 ; 13.192 ; Fall       ; clock           ;
+;  R2[3]         ; clock      ; 12.571 ; 12.571 ; Fall       ; clock           ;
+;  R2[4]         ; clock      ; 12.621 ; 12.621 ; Fall       ; clock           ;
+;  R2[5]         ; clock      ; 12.335 ; 12.335 ; Fall       ; clock           ;
+;  R2[6]         ; clock      ; 12.773 ; 12.773 ; Fall       ; clock           ;
+;  R2[7]         ; clock      ; 12.356 ; 12.356 ; Fall       ; clock           ;
+; R3[*]          ; clock      ; 12.725 ; 12.725 ; Fall       ; clock           ;
+;  R3[0]         ; clock      ; 12.725 ; 12.725 ; Fall       ; clock           ;
+;  R3[1]         ; clock      ; 12.408 ; 12.408 ; Fall       ; clock           ;
+;  R3[2]         ; clock      ; 12.097 ; 12.097 ; Fall       ; clock           ;
+;  R3[3]         ; clock      ; 11.903 ; 11.903 ; Fall       ; clock           ;
+;  R3[4]         ; clock      ; 11.961 ; 11.961 ; Fall       ; clock           ;
+;  R3[5]         ; clock      ; 11.944 ; 11.944 ; Fall       ; clock           ;
+;  R3[6]         ; clock      ; 12.257 ; 12.257 ; Fall       ; clock           ;
+;  R3[7]         ; clock      ; 11.947 ; 11.947 ; Fall       ; clock           ;
+; R4[*]          ; clock      ; 12.612 ; 12.612 ; Fall       ; clock           ;
+;  R4[0]         ; clock      ; 11.403 ; 11.403 ; Fall       ; clock           ;
+;  R4[1]         ; clock      ; 12.612 ; 12.612 ; Fall       ; clock           ;
+;  R4[2]         ; clock      ; 12.330 ; 12.330 ; Fall       ; clock           ;
+;  R4[3]         ; clock      ; 11.868 ; 11.868 ; Fall       ; clock           ;
+;  R4[4]         ; clock      ; 12.260 ; 12.260 ; Fall       ; clock           ;
+;  R4[5]         ; clock      ; 12.330 ; 12.330 ; Fall       ; clock           ;
+;  R4[6]         ; clock      ; 12.262 ; 12.262 ; Fall       ; clock           ;
+;  R4[7]         ; clock      ; 12.253 ; 12.253 ; Fall       ; clock           ;
+; R5[*]          ; clock      ; 12.624 ; 12.624 ; Fall       ; clock           ;
+;  R5[0]         ; clock      ; 11.443 ; 11.443 ; Fall       ; clock           ;
+;  R5[1]         ; clock      ; 11.927 ; 11.927 ; Fall       ; clock           ;
+;  R5[2]         ; clock      ; 12.624 ; 12.624 ; Fall       ; clock           ;
+;  R5[3]         ; clock      ; 11.736 ; 11.736 ; Fall       ; clock           ;
+;  R5[4]         ; clock      ; 12.025 ; 12.025 ; Fall       ; clock           ;
+;  R5[5]         ; clock      ; 11.649 ; 11.649 ; Fall       ; clock           ;
+;  R5[6]         ; clock      ; 11.585 ; 11.585 ; Fall       ; clock           ;
+;  R5[7]         ; clock      ; 11.378 ; 11.378 ; Fall       ; clock           ;
+; load           ; clock      ; 9.534  ; 9.534  ; Fall       ; clock           ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; BusInterno[*]  ; clock      ; 5.040 ; 5.040 ; Rise       ; clock           ;
+;  BusInterno[0] ; clock      ; 5.344 ; 5.344 ; Rise       ; clock           ;
+;  BusInterno[1] ; clock      ; 5.334 ; 5.334 ; Rise       ; clock           ;
+;  BusInterno[2] ; clock      ; 5.040 ; 5.040 ; Rise       ; clock           ;
+;  BusInterno[3] ; clock      ; 5.116 ; 5.116 ; Rise       ; clock           ;
+;  BusInterno[4] ; clock      ; 5.159 ; 5.159 ; Rise       ; clock           ;
+;  BusInterno[5] ; clock      ; 5.481 ; 5.481 ; Rise       ; clock           ;
+;  BusInterno[6] ; clock      ; 5.201 ; 5.201 ; Rise       ; clock           ;
+;  BusInterno[7] ; clock      ; 5.259 ; 5.259 ; Rise       ; clock           ;
+; Cout           ; clock      ; 5.786 ; 5.786 ; Rise       ; clock           ;
+; OperandoA[*]   ; clock      ; 5.418 ; 5.418 ; Rise       ; clock           ;
+;  OperandoA[0]  ; clock      ; 5.887 ; 5.887 ; Rise       ; clock           ;
+;  OperandoA[1]  ; clock      ; 5.683 ; 5.683 ; Rise       ; clock           ;
+;  OperandoA[2]  ; clock      ; 5.440 ; 5.440 ; Rise       ; clock           ;
+;  OperandoA[3]  ; clock      ; 5.598 ; 5.598 ; Rise       ; clock           ;
+;  OperandoA[4]  ; clock      ; 5.558 ; 5.558 ; Rise       ; clock           ;
+;  OperandoA[5]  ; clock      ; 5.774 ; 5.774 ; Rise       ; clock           ;
+;  OperandoA[6]  ; clock      ; 5.684 ; 5.684 ; Rise       ; clock           ;
+;  OperandoA[7]  ; clock      ; 5.418 ; 5.418 ; Rise       ; clock           ;
+; OperandoB[*]   ; clock      ; 5.404 ; 5.404 ; Rise       ; clock           ;
+;  OperandoB[0]  ; clock      ; 5.515 ; 5.515 ; Rise       ; clock           ;
+;  OperandoB[1]  ; clock      ; 5.473 ; 5.473 ; Rise       ; clock           ;
+;  OperandoB[2]  ; clock      ; 5.404 ; 5.404 ; Rise       ; clock           ;
+;  OperandoB[3]  ; clock      ; 5.605 ; 5.605 ; Rise       ; clock           ;
+;  OperandoB[4]  ; clock      ; 5.554 ; 5.554 ; Rise       ; clock           ;
+;  OperandoB[5]  ; clock      ; 5.629 ; 5.629 ; Rise       ; clock           ;
+;  OperandoB[6]  ; clock      ; 5.794 ; 5.794 ; Rise       ; clock           ;
+;  OperandoB[7]  ; clock      ; 5.524 ; 5.524 ; Rise       ; clock           ;
+; OutALU[*]      ; clock      ; 5.056 ; 5.056 ; Rise       ; clock           ;
+;  OutALU[0]     ; clock      ; 5.385 ; 5.385 ; Rise       ; clock           ;
+;  OutALU[1]     ; clock      ; 5.056 ; 5.056 ; Rise       ; clock           ;
+;  OutALU[2]     ; clock      ; 5.058 ; 5.058 ; Rise       ; clock           ;
+;  OutALU[3]     ; clock      ; 5.818 ; 5.818 ; Rise       ; clock           ;
+;  OutALU[4]     ; clock      ; 5.386 ; 5.386 ; Rise       ; clock           ;
+;  OutALU[5]     ; clock      ; 5.419 ; 5.419 ; Rise       ; clock           ;
+;  OutALU[6]     ; clock      ; 5.659 ; 5.659 ; Rise       ; clock           ;
+;  OutALU[7]     ; clock      ; 5.609 ; 5.609 ; Rise       ; clock           ;
+; addres[*]      ; clock      ; 3.596 ; 3.596 ; Rise       ; clock           ;
+;  addres[0]     ; clock      ; 3.858 ; 3.858 ; Rise       ; clock           ;
+;  addres[1]     ; clock      ; 3.793 ; 3.793 ; Rise       ; clock           ;
+;  addres[2]     ; clock      ; 3.652 ; 3.652 ; Rise       ; clock           ;
+;  addres[3]     ; clock      ; 3.596 ; 3.596 ; Rise       ; clock           ;
+; load           ; clock      ; 4.108 ; 4.108 ; Rise       ; clock           ;
+; BusInterno[*]  ; clock      ; 5.403 ; 5.403 ; Fall       ; clock           ;
+;  BusInterno[0] ; clock      ; 5.854 ; 5.854 ; Fall       ; clock           ;
+;  BusInterno[1] ; clock      ; 5.628 ; 5.628 ; Fall       ; clock           ;
+;  BusInterno[2] ; clock      ; 5.572 ; 5.572 ; Fall       ; clock           ;
+;  BusInterno[3] ; clock      ; 5.643 ; 5.643 ; Fall       ; clock           ;
+;  BusInterno[4] ; clock      ; 5.403 ; 5.403 ; Fall       ; clock           ;
+;  BusInterno[5] ; clock      ; 5.593 ; 5.593 ; Fall       ; clock           ;
+;  BusInterno[6] ; clock      ; 5.772 ; 5.772 ; Fall       ; clock           ;
+;  BusInterno[7] ; clock      ; 5.465 ; 5.465 ; Fall       ; clock           ;
+; Cout           ; clock      ; 5.923 ; 5.923 ; Fall       ; clock           ;
+; OperandoA[*]   ; clock      ; 5.106 ; 5.106 ; Fall       ; clock           ;
+;  OperandoA[0]  ; clock      ; 5.643 ; 5.643 ; Fall       ; clock           ;
+;  OperandoA[1]  ; clock      ; 5.574 ; 5.574 ; Fall       ; clock           ;
+;  OperandoA[2]  ; clock      ; 5.106 ; 5.106 ; Fall       ; clock           ;
+;  OperandoA[3]  ; clock      ; 5.553 ; 5.553 ; Fall       ; clock           ;
+;  OperandoA[4]  ; clock      ; 5.294 ; 5.294 ; Fall       ; clock           ;
+;  OperandoA[5]  ; clock      ; 5.423 ; 5.423 ; Fall       ; clock           ;
+;  OperandoA[6]  ; clock      ; 5.400 ; 5.400 ; Fall       ; clock           ;
+;  OperandoA[7]  ; clock      ; 5.277 ; 5.277 ; Fall       ; clock           ;
+; OperandoB[*]   ; clock      ; 5.140 ; 5.140 ; Fall       ; clock           ;
+;  OperandoB[0]  ; clock      ; 5.270 ; 5.270 ; Fall       ; clock           ;
+;  OperandoB[1]  ; clock      ; 5.140 ; 5.140 ; Fall       ; clock           ;
+;  OperandoB[2]  ; clock      ; 5.295 ; 5.295 ; Fall       ; clock           ;
+;  OperandoB[3]  ; clock      ; 5.630 ; 5.630 ; Fall       ; clock           ;
+;  OperandoB[4]  ; clock      ; 5.233 ; 5.233 ; Fall       ; clock           ;
+;  OperandoB[5]  ; clock      ; 5.331 ; 5.331 ; Fall       ; clock           ;
+;  OperandoB[6]  ; clock      ; 5.522 ; 5.522 ; Fall       ; clock           ;
+;  OperandoB[7]  ; clock      ; 5.195 ; 5.195 ; Fall       ; clock           ;
+; OutALU[*]      ; clock      ; 5.531 ; 5.531 ; Fall       ; clock           ;
+;  OutALU[0]     ; clock      ; 5.895 ; 5.895 ; Fall       ; clock           ;
+;  OutALU[1]     ; clock      ; 5.761 ; 5.761 ; Fall       ; clock           ;
+;  OutALU[2]     ; clock      ; 5.793 ; 5.793 ; Fall       ; clock           ;
+;  OutALU[3]     ; clock      ; 6.010 ; 6.010 ; Fall       ; clock           ;
+;  OutALU[4]     ; clock      ; 5.786 ; 5.786 ; Fall       ; clock           ;
+;  OutALU[5]     ; clock      ; 5.531 ; 5.531 ; Fall       ; clock           ;
+;  OutALU[6]     ; clock      ; 5.949 ; 5.949 ; Fall       ; clock           ;
+;  OutALU[7]     ; clock      ; 5.783 ; 5.783 ; Fall       ; clock           ;
+; R0[*]          ; clock      ; 4.582 ; 4.582 ; Fall       ; clock           ;
+;  R0[0]         ; clock      ; 4.923 ; 4.923 ; Fall       ; clock           ;
+;  R0[1]         ; clock      ; 4.604 ; 4.604 ; Fall       ; clock           ;
+;  R0[2]         ; clock      ; 4.891 ; 4.891 ; Fall       ; clock           ;
+;  R0[3]         ; clock      ; 4.721 ; 4.721 ; Fall       ; clock           ;
+;  R0[4]         ; clock      ; 4.893 ; 4.893 ; Fall       ; clock           ;
+;  R0[5]         ; clock      ; 4.612 ; 4.612 ; Fall       ; clock           ;
+;  R0[6]         ; clock      ; 4.766 ; 4.766 ; Fall       ; clock           ;
+;  R0[7]         ; clock      ; 4.582 ; 4.582 ; Fall       ; clock           ;
+; R1[*]          ; clock      ; 5.057 ; 5.057 ; Fall       ; clock           ;
+;  R1[0]         ; clock      ; 5.282 ; 5.282 ; Fall       ; clock           ;
+;  R1[1]         ; clock      ; 5.391 ; 5.391 ; Fall       ; clock           ;
+;  R1[2]         ; clock      ; 5.274 ; 5.274 ; Fall       ; clock           ;
+;  R1[3]         ; clock      ; 5.137 ; 5.137 ; Fall       ; clock           ;
+;  R1[4]         ; clock      ; 5.293 ; 5.293 ; Fall       ; clock           ;
+;  R1[5]         ; clock      ; 5.190 ; 5.190 ; Fall       ; clock           ;
+;  R1[6]         ; clock      ; 5.360 ; 5.360 ; Fall       ; clock           ;
+;  R1[7]         ; clock      ; 5.057 ; 5.057 ; Fall       ; clock           ;
+; R2[*]          ; clock      ; 5.292 ; 5.292 ; Fall       ; clock           ;
+;  R2[0]         ; clock      ; 5.483 ; 5.483 ; Fall       ; clock           ;
+;  R2[1]         ; clock      ; 5.464 ; 5.464 ; Fall       ; clock           ;
+;  R2[2]         ; clock      ; 5.588 ; 5.588 ; Fall       ; clock           ;
+;  R2[3]         ; clock      ; 5.381 ; 5.381 ; Fall       ; clock           ;
+;  R2[4]         ; clock      ; 5.409 ; 5.409 ; Fall       ; clock           ;
+;  R2[5]         ; clock      ; 5.313 ; 5.313 ; Fall       ; clock           ;
+;  R2[6]         ; clock      ; 5.483 ; 5.483 ; Fall       ; clock           ;
+;  R2[7]         ; clock      ; 5.292 ; 5.292 ; Fall       ; clock           ;
+; R3[*]          ; clock      ; 4.986 ; 4.986 ; Fall       ; clock           ;
+;  R3[0]         ; clock      ; 5.245 ; 5.245 ; Fall       ; clock           ;
+;  R3[1]         ; clock      ; 5.178 ; 5.178 ; Fall       ; clock           ;
+;  R3[2]         ; clock      ; 5.076 ; 5.076 ; Fall       ; clock           ;
+;  R3[3]         ; clock      ; 4.986 ; 4.986 ; Fall       ; clock           ;
+;  R3[4]         ; clock      ; 4.996 ; 4.996 ; Fall       ; clock           ;
+;  R3[5]         ; clock      ; 4.991 ; 4.991 ; Fall       ; clock           ;
+;  R3[6]         ; clock      ; 5.112 ; 5.112 ; Fall       ; clock           ;
+;  R3[7]         ; clock      ; 4.997 ; 4.997 ; Fall       ; clock           ;
+; R4[*]          ; clock      ; 4.988 ; 4.988 ; Fall       ; clock           ;
+;  R4[0]         ; clock      ; 4.988 ; 4.988 ; Fall       ; clock           ;
+;  R4[1]         ; clock      ; 5.429 ; 5.429 ; Fall       ; clock           ;
+;  R4[2]         ; clock      ; 5.326 ; 5.326 ; Fall       ; clock           ;
+;  R4[3]         ; clock      ; 5.165 ; 5.165 ; Fall       ; clock           ;
+;  R4[4]         ; clock      ; 5.286 ; 5.286 ; Fall       ; clock           ;
+;  R4[5]         ; clock      ; 5.334 ; 5.334 ; Fall       ; clock           ;
+;  R4[6]         ; clock      ; 5.299 ; 5.299 ; Fall       ; clock           ;
+;  R4[7]         ; clock      ; 5.307 ; 5.307 ; Fall       ; clock           ;
+; R5[*]          ; clock      ; 4.772 ; 4.772 ; Fall       ; clock           ;
+;  R5[0]         ; clock      ; 4.808 ; 4.808 ; Fall       ; clock           ;
+;  R5[1]         ; clock      ; 4.990 ; 4.990 ; Fall       ; clock           ;
+;  R5[2]         ; clock      ; 5.201 ; 5.201 ; Fall       ; clock           ;
+;  R5[3]         ; clock      ; 4.912 ; 4.912 ; Fall       ; clock           ;
+;  R5[4]         ; clock      ; 5.035 ; 5.035 ; Fall       ; clock           ;
+;  R5[5]         ; clock      ; 4.909 ; 4.909 ; Fall       ; clock           ;
+;  R5[6]         ; clock      ; 4.878 ; 4.878 ; Fall       ; clock           ;
+;  R5[7]         ; clock      ; 4.772 ; 4.772 ; Fall       ; clock           ;
+; load           ; clock      ; 4.108 ; 4.108 ; Fall       ; clock           ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 18       ; 0        ; 43128    ; 5076     ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 18       ; 0        ; 43128    ; 5076     ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 1     ; 1    ;
+; Unconstrained Output Ports      ; 86    ; 86   ;
+; Unconstrained Output Port Paths ; 761   ; 761  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Sep 02 13:19:37 2014
+Info: Command: quartus_sta MicroComputador -c MicroComputador
+Info: qsta_default_script.tcl version: #1
+Critical Warning: Synopsys Design Constraints File file not found: 'MicroComputador.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name clock clock
+Info: Analyzing Slow Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -6.860
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -6.860      -265.818 clock 
+Info: Worst-case hold slack is 0.490
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.490         0.000 clock 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -1.675
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.675       -54.035 clock 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info: Started post-fitting delay annotation
+Warning: Found 86 output pins without output pin load capacitance assignment
+    Info: Pin "Cout" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R0[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R0[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R0[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R0[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R0[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R0[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R0[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R0[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R1[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R1[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R1[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R1[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R1[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R1[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R1[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R1[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R2[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R2[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R2[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R2[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R2[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R2[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R2[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R2[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R3[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R3[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R3[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R3[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R3[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R3[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R3[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R3[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R4[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R4[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R4[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R4[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R4[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R4[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R4[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R4[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R5[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R5[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R5[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R5[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R5[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R5[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R5[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "R5[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "load" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "addres[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "addres[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "addres[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "addres[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "BusInterno[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "BusInterno[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "BusInterno[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "BusInterno[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "BusInterno[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "BusInterno[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "BusInterno[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "BusInterno[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OperandoA[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OperandoA[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OperandoA[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OperandoA[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OperandoA[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OperandoA[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OperandoA[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OperandoA[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OperandoB[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OperandoB[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OperandoB[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OperandoB[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OperandoB[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OperandoB[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OperandoB[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OperandoB[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OutALU[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OutALU[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OutALU[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OutALU[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OutALU[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OutALU[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OutALU[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OutALU[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info: Delay annotation completed successfully
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -2.314
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -2.314       -83.823 clock 
+Info: Worst-case hold slack is 0.224
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.224         0.000 clock 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -1.000
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.000       -21.256 clock 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 223 megabytes
+    Info: Processing ended: Tue Sep 02 13:19:44 2014
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:02
+
+

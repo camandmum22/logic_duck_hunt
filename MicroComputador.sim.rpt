@@ -1,0 +1,511 @@
+Simulator report for MicroComputador
+Tue Sep 02 13:20:19 2014
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ALTSYNCRAM
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------+
+; Simulator Summary                             ;
++-----------------------------+-----------------+
+; Type                        ; Value           ;
++-----------------------------+-----------------+
+; Simulation Start Time       ; 0 ps            ;
+; Simulation End Time         ; 20.0 us         ;
+; Simulation Netlist Size     ; 261 nodes       ;
+; Simulation Coverage         ;      63.21 %    ;
+; Total Number of Transitions ; 1184            ;
+; Simulation Breakpoints      ; 0               ;
+; Family                      ; Arria GX        ;
+; Device                      ; EP1AGX20CF484C6 ;
++-----------------------------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                         ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Option                                                                                     ; Setting       ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Simulation mode                                                                            ; Timing        ; Timing        ;
+; Start time                                                                                 ; 0 ns          ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF          ;               ;
+; Vector input source                                                                        ; TestCPUv2.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On            ; On            ;
+; Check outputs                                                                              ; Off           ; Off           ;
+; Report simulation coverage                                                                 ; On            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On            ; On            ;
+; Display missing 1-value coverage report                                                    ; On            ; On            ;
+; Display missing 0-value coverage report                                                    ; On            ; On            ;
+; Detect setup and hold time violations                                                      ; Off           ; Off           ;
+; Detect glitches                                                                            ; Off           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off           ; Off           ;
+; Generate Signal Activity File                                                              ; Off           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On            ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto          ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++----------------------------------------------------------------------------------------------------+
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ALTSYNCRAM ;
++----------------------------------------------------------------------------------------------------+
+Please refer to fitter text-based report (*.fit.rpt) to view logical memory report content in ASCII.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      63.21 % ;
+; Total nodes checked                                 ; 261          ;
+; Total output ports checked                          ; 280          ;
+; Total output ports with complete 1/0-value coverage ; 177          ;
+; Total output ports with no 1/0-value coverage       ; 59           ;
+; Total output ports with no 1-value coverage         ; 59           ;
+; Total output ports with no 0-value coverage         ; 103          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                               ;
++------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                            ; Output Port Name                                                                                ; Output Port Type ;
++------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+; |CPU8bits|UnidadControl:inst5|muxOp:inst23|opOut[2]~0                                                ; |CPU8bits|UnidadControl:inst5|muxOp:inst23|opOut[2]~0                                           ; combout          ;
+; |CPU8bits|UnidadControl:inst5|muxOp:inst23|opOut[0]~1                                                ; |CPU8bits|UnidadControl:inst5|muxOp:inst23|opOut[0]~1                                           ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux0~2                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux0~2                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux0~3                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux0~3                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst8|Mux1~1                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux1~1                                                                ; combout          ;
+; |CPU8bits|UnidadControl:inst5|muxOp:inst24|opOut[0]~1                                                ; |CPU8bits|UnidadControl:inst5|muxOp:inst24|opOut[0]~1                                           ; combout          ;
+; |CPU8bits|muxbus6a1:inst8|Mux0~0                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux0~0                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst8|Mux0~1                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux0~1                                                                ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|52~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst1|52~0                                                           ; combout          ;
+; |CPU8bits|Registro8bits:inst10|74374:inst|19                                                         ; |CPU8bits|Registro8bits:inst10|74374:inst|19                                                    ; regout           ;
+; |CPU8bits|muxbus6a1:inst8|Mux1~2                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux1~2                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst8|Mux1~3                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux1~3                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux1~0                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux1~0                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux1~1                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux1~1                                                                ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|48~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst1|48~0                                                           ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux6~0                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux6~0                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux6~1                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux6~1                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst8|Mux6~0                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux6~0                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst8|Mux6~1                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux6~1                                                                ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|44                                                                  ; |CPU8bits|ALU1:inst2|74181:inst2|44                                                             ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|47~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst2|47~0                                                           ; combout          ;
+; |CPU8bits|Registro8bits:inst|74374:inst|13                                                           ; |CPU8bits|Registro8bits:inst|74374:inst|13                                                      ; regout           ;
+; |CPU8bits|muxbus6a1:inst8|Mux7~0                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux7~0                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst8|Mux7~1                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux7~1                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux7~0                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux7~0                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux7~1                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux7~1                                                                ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|78~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst2|78~0                                                           ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|43                                                                  ; |CPU8bits|ALU1:inst2|74181:inst2|43                                                             ; combout          ;
+; |CPU8bits|muxbus6a1:inst8|Mux1~4                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux1~4                                                                ; combout          ;
+; |CPU8bits|Registro8bits:inst10|74374:inst|15                                                         ; |CPU8bits|Registro8bits:inst10|74374:inst|15                                                    ; regout           ;
+; |CPU8bits|muxbus6a1:inst8|Mux5~0                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux5~0                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst8|Mux5~1                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux5~1                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst8|Mux5~2                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux5~2                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux5~0                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux5~0                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux5~1                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux5~1                                                                ; combout          ;
+; |CPU8bits|Registro8bits:inst|74374:inst|16                                                           ; |CPU8bits|Registro8bits:inst|74374:inst|16                                                      ; regout           ;
+; |CPU8bits|muxbus6a1:inst8|Mux4~0                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux4~0                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst8|Mux4~1                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux4~1                                                                ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|52~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst2|52~0                                                           ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux4~0                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux4~0                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux4~1                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux4~1                                                                ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|78~1                                                                ; |CPU8bits|ALU1:inst2|74181:inst2|78~1                                                           ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|45~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst2|45~0                                                           ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|51~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst2|51~0                                                           ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|78~2                                                                ; |CPU8bits|ALU1:inst2|74181:inst2|78~2                                                           ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|78~3                                                                ; |CPU8bits|ALU1:inst2|74181:inst2|78~3                                                           ; combout          ;
+; |CPU8bits|Registro8bits:inst|74374:inst|17                                                           ; |CPU8bits|Registro8bits:inst|74374:inst|17                                                      ; regout           ;
+; |CPU8bits|muxbus6a1:inst8|Mux3~0                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux3~0                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst8|Mux3~1                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux3~1                                                                ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|46~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst1|46~0                                                           ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux3~0                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux3~0                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux3~1                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux3~1                                                                ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|47~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst1|47~0                                                           ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|78~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst1|78~0                                                           ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|43~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst1|43~0                                                           ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|44~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst1|44~0                                                           ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|78~1                                                                ; |CPU8bits|ALU1:inst2|74181:inst1|78~1                                                           ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|45                                                                  ; |CPU8bits|ALU1:inst2|74181:inst1|45                                                             ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|78~2                                                                ; |CPU8bits|ALU1:inst2|74181:inst1|78~2                                                           ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|78~3                                                                ; |CPU8bits|ALU1:inst2|74181:inst1|78~3                                                           ; combout          ;
+; |CPU8bits|Counter:inst26|temp[2]                                                                     ; |CPU8bits|Counter:inst26|temp[2]                                                                ; regout           ;
+; |CPU8bits|Counter:inst26|temp[1]                                                                     ; |CPU8bits|Counter:inst26|temp[1]                                                                ; regout           ;
+; |CPU8bits|Counter:inst26|temp[0]                                                                     ; |CPU8bits|Counter:inst26|temp[0]                                                                ; regout           ;
+; |CPU8bits|ALU1:inst2|74181:inst1|78~4                                                                ; |CPU8bits|ALU1:inst2|74181:inst1|78~4                                                           ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|77~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst1|77~0                                                           ; combout          ;
+; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w7_n0_mux_dataout~0                 ; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w7_n0_mux_dataout~0            ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|82                                                                  ; |CPU8bits|ALU1:inst2|74181:inst1|82                                                             ; combout          ;
+; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w6_n0_mux_dataout~0                 ; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w6_n0_mux_dataout~0            ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|81~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst1|81~0                                                           ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|81                                                                  ; |CPU8bits|ALU1:inst2|74181:inst1|81                                                             ; combout          ;
+; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w5_n0_mux_dataout~0                 ; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w5_n0_mux_dataout~0            ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|80~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst1|80~0                                                           ; combout          ;
+; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w4_n0_mux_dataout~0                 ; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w4_n0_mux_dataout~0            ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|48~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst2|48~0                                                           ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|75~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst2|75~0                                                           ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|74~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst2|74~0                                                           ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|77~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst2|77~0                                                           ; combout          ;
+; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w3_n0_mux_dataout~0                 ; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w3_n0_mux_dataout~0            ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|82~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst2|82~0                                                           ; combout          ;
+; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w2_n0_mux_dataout~0                 ; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w2_n0_mux_dataout~0            ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|81~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst2|81~0                                                           ; combout          ;
+; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w1_n0_mux_dataout~0                 ; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w1_n0_mux_dataout~0            ; combout          ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[0]  ; portadataout0    ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[1]  ; portadataout1    ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[2]  ; portadataout2    ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[3]  ; portadataout3    ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[4]  ; portadataout4    ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[5]  ; portadataout5    ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[6]  ; portadataout6    ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[11] ; portadataout8    ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[13] ; portadataout10   ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[14] ; portadataout11   ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[15] ; portadataout12   ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[16] ; portadataout13   ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[17] ; portadataout14   ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[18] ; portadataout15   ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[19] ; portadataout16   ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[20] ; portadataout17   ;
+; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w0_n0_mux_dataout~0                 ; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w0_n0_mux_dataout~0            ; combout          ;
+; |CPU8bits|muxbus6a1:inst8|Mux3~2                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux3~2                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst8|Mux4~2                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux4~2                                                                ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|77                                                                  ; |CPU8bits|ALU1:inst2|74181:inst1|77                                                             ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst1|80                                                                  ; |CPU8bits|ALU1:inst2|74181:inst1|80                                                             ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|77                                                                  ; |CPU8bits|ALU1:inst2|74181:inst2|77                                                             ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|82                                                                  ; |CPU8bits|ALU1:inst2|74181:inst2|82                                                             ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|81                                                                  ; |CPU8bits|ALU1:inst2|74181:inst2|81                                                             ; combout          ;
+; |CPU8bits|Counter:inst26|temp[3]~0                                                                   ; |CPU8bits|Counter:inst26|temp[3]~0                                                              ; combout          ;
+; |CPU8bits|Counter:inst26|temp[2]~1                                                                   ; |CPU8bits|Counter:inst26|temp[2]~1                                                              ; combout          ;
+; |CPU8bits|Counter:inst26|temp[1]~2                                                                   ; |CPU8bits|Counter:inst26|temp[1]~2                                                              ; combout          ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a8 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[8]  ; portadataout0    ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a8 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[9]  ; portadataout1    ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a8 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[10] ; portadataout2    ;
+; |CPU8bits|DemuxReal1a8:inst25|18                                                                     ; |CPU8bits|DemuxReal1a8:inst25|18                                                                ; combout          ;
+; |CPU8bits|DemuxReal1a8:inst25|15                                                                     ; |CPU8bits|DemuxReal1a8:inst25|15                                                                ; combout          ;
+; |CPU8bits|DemuxReal1a8:inst25|16                                                                     ; |CPU8bits|DemuxReal1a8:inst25|16                                                                ; combout          ;
+; |CPU8bits|DemuxReal1a8:inst25|20                                                                     ; |CPU8bits|DemuxReal1a8:inst25|20                                                                ; combout          ;
+; |CPU8bits|DemuxReal1a8:inst25|17                                                                     ; |CPU8bits|DemuxReal1a8:inst25|17                                                                ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|80~0                                                                ; |CPU8bits|ALU1:inst2|74181:inst2|80~0                                                           ; combout          ;
+; |CPU8bits|Counter:inst26|temp[0]~3                                                                   ; |CPU8bits|Counter:inst26|temp[0]~3                                                              ; combout          ;
+; |CPU8bits|clock                                                                                      ; |CPU8bits|clock~corein                                                                          ; combout          ;
+; |CPU8bits|Cout                                                                                       ; |CPU8bits|Cout                                                                                  ; padio            ;
+; |CPU8bits|R0[4]                                                                                      ; |CPU8bits|R0[4]                                                                                 ; padio            ;
+; |CPU8bits|R0[3]                                                                                      ; |CPU8bits|R0[3]                                                                                 ; padio            ;
+; |CPU8bits|R0[0]                                                                                      ; |CPU8bits|R0[0]                                                                                 ; padio            ;
+; |CPU8bits|R1[6]                                                                                      ; |CPU8bits|R1[6]                                                                                 ; padio            ;
+; |CPU8bits|R1[2]                                                                                      ; |CPU8bits|R1[2]                                                                                 ; padio            ;
+; |CPU8bits|load                                                                                       ; |CPU8bits|load                                                                                  ; padio            ;
+; |CPU8bits|addres[2]                                                                                  ; |CPU8bits|addres[2]                                                                             ; padio            ;
+; |CPU8bits|addres[1]                                                                                  ; |CPU8bits|addres[1]                                                                             ; padio            ;
+; |CPU8bits|addres[0]                                                                                  ; |CPU8bits|addres[0]                                                                             ; padio            ;
+; |CPU8bits|BusInterno[7]                                                                              ; |CPU8bits|BusInterno[7]                                                                         ; padio            ;
+; |CPU8bits|BusInterno[6]                                                                              ; |CPU8bits|BusInterno[6]                                                                         ; padio            ;
+; |CPU8bits|BusInterno[5]                                                                              ; |CPU8bits|BusInterno[5]                                                                         ; padio            ;
+; |CPU8bits|BusInterno[4]                                                                              ; |CPU8bits|BusInterno[4]                                                                         ; padio            ;
+; |CPU8bits|BusInterno[3]                                                                              ; |CPU8bits|BusInterno[3]                                                                         ; padio            ;
+; |CPU8bits|BusInterno[2]                                                                              ; |CPU8bits|BusInterno[2]                                                                         ; padio            ;
+; |CPU8bits|BusInterno[1]                                                                              ; |CPU8bits|BusInterno[1]                                                                         ; padio            ;
+; |CPU8bits|BusInterno[0]                                                                              ; |CPU8bits|BusInterno[0]                                                                         ; padio            ;
+; |CPU8bits|OperandoA[7]                                                                               ; |CPU8bits|OperandoA[7]                                                                          ; padio            ;
+; |CPU8bits|OperandoA[6]                                                                               ; |CPU8bits|OperandoA[6]                                                                          ; padio            ;
+; |CPU8bits|OperandoA[4]                                                                               ; |CPU8bits|OperandoA[4]                                                                          ; padio            ;
+; |CPU8bits|OperandoA[3]                                                                               ; |CPU8bits|OperandoA[3]                                                                          ; padio            ;
+; |CPU8bits|OperandoA[2]                                                                               ; |CPU8bits|OperandoA[2]                                                                          ; padio            ;
+; |CPU8bits|OperandoA[1]                                                                               ; |CPU8bits|OperandoA[1]                                                                          ; padio            ;
+; |CPU8bits|OperandoA[0]                                                                               ; |CPU8bits|OperandoA[0]                                                                          ; padio            ;
+; |CPU8bits|OperandoB[7]                                                                               ; |CPU8bits|OperandoB[7]                                                                          ; padio            ;
+; |CPU8bits|OperandoB[6]                                                                               ; |CPU8bits|OperandoB[6]                                                                          ; padio            ;
+; |CPU8bits|OperandoB[4]                                                                               ; |CPU8bits|OperandoB[4]                                                                          ; padio            ;
+; |CPU8bits|OperandoB[3]                                                                               ; |CPU8bits|OperandoB[3]                                                                          ; padio            ;
+; |CPU8bits|OperandoB[2]                                                                               ; |CPU8bits|OperandoB[2]                                                                          ; padio            ;
+; |CPU8bits|OperandoB[1]                                                                               ; |CPU8bits|OperandoB[1]                                                                          ; padio            ;
+; |CPU8bits|OperandoB[0]                                                                               ; |CPU8bits|OperandoB[0]                                                                          ; padio            ;
+; |CPU8bits|OutALU[7]                                                                                  ; |CPU8bits|OutALU[7]                                                                             ; padio            ;
+; |CPU8bits|OutALU[6]                                                                                  ; |CPU8bits|OutALU[6]                                                                             ; padio            ;
+; |CPU8bits|OutALU[5]                                                                                  ; |CPU8bits|OutALU[5]                                                                             ; padio            ;
+; |CPU8bits|OutALU[4]                                                                                  ; |CPU8bits|OutALU[4]                                                                             ; padio            ;
+; |CPU8bits|OutALU[3]                                                                                  ; |CPU8bits|OutALU[3]                                                                             ; padio            ;
+; |CPU8bits|OutALU[2]                                                                                  ; |CPU8bits|OutALU[2]                                                                             ; padio            ;
+; |CPU8bits|OutALU[1]                                                                                  ; |CPU8bits|OutALU[1]                                                                             ; padio            ;
+; |CPU8bits|OutALU[0]                                                                                  ; |CPU8bits|OutALU[0]                                                                             ; padio            ;
+; |CPU8bits|clock~clkctrl                                                                              ; |CPU8bits|clock~clkctrl                                                                         ; outclk           ;
+; |CPU8bits|DemuxReal1a8:inst25|15~clkctrl                                                             ; |CPU8bits|DemuxReal1a8:inst25|15~clkctrl                                                        ; outclk           ;
+; |CPU8bits|DemuxReal1a8:inst25|16~clkctrl                                                             ; |CPU8bits|DemuxReal1a8:inst25|16~clkctrl                                                        ; outclk           ;
+; |CPU8bits|DemuxReal1a8:inst25|17~clkctrl                                                             ; |CPU8bits|DemuxReal1a8:inst25|17~clkctrl                                                        ; outclk           ;
+; |CPU8bits|DemuxReal1a8:inst25|18~clkctrl                                                             ; |CPU8bits|DemuxReal1a8:inst25|18~clkctrl                                                        ; outclk           ;
+; |CPU8bits|DemuxReal1a8:inst25|20~clkctrl                                                             ; |CPU8bits|DemuxReal1a8:inst25|20~clkctrl                                                        ; outclk           ;
+; |CPU8bits|UnidadControl:inst5|muxOp:inst23|opOut[2]~0DUPLICATE                                       ; |CPU8bits|UnidadControl:inst5|muxOp:inst23|opOut[2]~0DUPLICATE                                  ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|78~3DUPLICATE                                                       ; |CPU8bits|ALU1:inst2|74181:inst2|78~3DUPLICATE                                                  ; combout          ;
+; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w7_n0_mux_dataout~0DUPLICATE        ; |CPU8bits|busmux:inst15|lpm_mux:$00000|mux_bgc:auto_generated|l1_w7_n0_mux_dataout~0DUPLICATE   ; combout          ;
+; |CPU8bits|ALU1:inst2|74181:inst2|74~0DUPLICATE                                                       ; |CPU8bits|ALU1:inst2|74181:inst2|74~0DUPLICATE                                                  ; combout          ;
+; |CPU8bits|Registro8bits:inst14|74374:inst|20~feeder                                                  ; |CPU8bits|Registro8bits:inst14|74374:inst|20~feeder                                             ; combout          ;
+; |CPU8bits|Registro8bits:inst10|74374:inst|19~feeder                                                  ; |CPU8bits|Registro8bits:inst10|74374:inst|19~feeder                                             ; combout          ;
+; |CPU8bits|Registro8bits:inst11|74374:inst|16~feeder                                                  ; |CPU8bits|Registro8bits:inst11|74374:inst|16~feeder                                             ; combout          ;
+; |CPU8bits|Registro8bits:inst10|74374:inst|16~feeder                                                  ; |CPU8bits|Registro8bits:inst10|74374:inst|16~feeder                                             ; combout          ;
+; |CPU8bits|Registro8bits:inst11|74374:inst|15~feeder                                                  ; |CPU8bits|Registro8bits:inst11|74374:inst|15~feeder                                             ; combout          ;
+; |CPU8bits|Registro8bits:inst14|74374:inst|14~feeder                                                  ; |CPU8bits|Registro8bits:inst14|74374:inst|14~feeder                                             ; combout          ;
+; |CPU8bits|Registro8bits:inst|74374:inst|14~feeder                                                    ; |CPU8bits|Registro8bits:inst|74374:inst|14~feeder                                               ; combout          ;
++------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                  ;
++------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                            ; Output Port Name                                                                                ; Output Port Type ;
++------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+; |CPU8bits|muxbus6a1:inst9|Mux0~0                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux0~0                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux0~1                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux0~1                                                                ; combout          ;
+; |CPU8bits|Registro8bits:inst|74374:inst|20                                                           ; |CPU8bits|Registro8bits:inst|74374:inst|20                                                      ; regout           ;
+; |CPU8bits|Registro8bits:inst13|74374:inst|20                                                         ; |CPU8bits|Registro8bits:inst13|74374:inst|20                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst14|74374:inst|20                                                         ; |CPU8bits|Registro8bits:inst14|74374:inst|20                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst11|74374:inst|20                                                         ; |CPU8bits|Registro8bits:inst11|74374:inst|20                                                    ; regout           ;
+; |CPU8bits|UnidadControl:inst5|muxOp:inst24|opOut[2]~0                                                ; |CPU8bits|UnidadControl:inst5|muxOp:inst24|opOut[2]~0                                           ; combout          ;
+; |CPU8bits|Registro8bits:inst13|74374:inst|19                                                         ; |CPU8bits|Registro8bits:inst13|74374:inst|19                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst11|74374:inst|19                                                         ; |CPU8bits|Registro8bits:inst11|74374:inst|19                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst13|74374:inst|14                                                         ; |CPU8bits|Registro8bits:inst13|74374:inst|14                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst11|74374:inst|14                                                         ; |CPU8bits|Registro8bits:inst11|74374:inst|14                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst13|74374:inst|13                                                         ; |CPU8bits|Registro8bits:inst13|74374:inst|13                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst12|74374:inst|13                                                         ; |CPU8bits|Registro8bits:inst12|74374:inst|13                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst13|74374:inst|15                                                         ; |CPU8bits|Registro8bits:inst13|74374:inst|15                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst14|74374:inst|15                                                         ; |CPU8bits|Registro8bits:inst14|74374:inst|15                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst12|74374:inst|15                                                         ; |CPU8bits|Registro8bits:inst12|74374:inst|15                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst13|74374:inst|16                                                         ; |CPU8bits|Registro8bits:inst13|74374:inst|16                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst14|74374:inst|16                                                         ; |CPU8bits|Registro8bits:inst14|74374:inst|16                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst13|74374:inst|17                                                         ; |CPU8bits|Registro8bits:inst13|74374:inst|17                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst10|74374:inst|17                                                         ; |CPU8bits|Registro8bits:inst10|74374:inst|17                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst14|74374:inst|17                                                         ; |CPU8bits|Registro8bits:inst14|74374:inst|17                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst12|74374:inst|17                                                         ; |CPU8bits|Registro8bits:inst12|74374:inst|17                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst|74374:inst|18                                                           ; |CPU8bits|Registro8bits:inst|74374:inst|18                                                      ; regout           ;
+; |CPU8bits|Registro8bits:inst13|74374:inst|18                                                         ; |CPU8bits|Registro8bits:inst13|74374:inst|18                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst10|74374:inst|18                                                         ; |CPU8bits|Registro8bits:inst10|74374:inst|18                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst14|74374:inst|18                                                         ; |CPU8bits|Registro8bits:inst14|74374:inst|18                                                    ; regout           ;
+; |CPU8bits|muxbus6a1:inst8|Mux2~0                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux2~0                                                                ; combout          ;
+; |CPU8bits|Registro8bits:inst11|74374:inst|18                                                         ; |CPU8bits|Registro8bits:inst11|74374:inst|18                                                    ; regout           ;
+; |CPU8bits|muxbus6a1:inst9|Mux2~0                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux2~0                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux2~1                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux2~1                                                                ; combout          ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[7]  ; portadataout7    ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[12] ; portadataout9    ;
+; |CPU8bits|DemuxReal1a8:inst25|19                                                                     ; |CPU8bits|DemuxReal1a8:inst25|19                                                                ; combout          ;
+; |CPU8bits|R0[7]                                                                                      ; |CPU8bits|R0[7]                                                                                 ; padio            ;
+; |CPU8bits|R0[5]                                                                                      ; |CPU8bits|R0[5]                                                                                 ; padio            ;
+; |CPU8bits|R1[5]                                                                                      ; |CPU8bits|R1[5]                                                                                 ; padio            ;
+; |CPU8bits|R1[4]                                                                                      ; |CPU8bits|R1[4]                                                                                 ; padio            ;
+; |CPU8bits|R2[7]                                                                                      ; |CPU8bits|R2[7]                                                                                 ; padio            ;
+; |CPU8bits|R2[6]                                                                                      ; |CPU8bits|R2[6]                                                                                 ; padio            ;
+; |CPU8bits|R2[5]                                                                                      ; |CPU8bits|R2[5]                                                                                 ; padio            ;
+; |CPU8bits|R2[1]                                                                                      ; |CPU8bits|R2[1]                                                                                 ; padio            ;
+; |CPU8bits|R3[4]                                                                                      ; |CPU8bits|R3[4]                                                                                 ; padio            ;
+; |CPU8bits|R3[2]                                                                                      ; |CPU8bits|R3[2]                                                                                 ; padio            ;
+; |CPU8bits|R3[0]                                                                                      ; |CPU8bits|R3[0]                                                                                 ; padio            ;
+; |CPU8bits|R4[7]                                                                                      ; |CPU8bits|R4[7]                                                                                 ; padio            ;
+; |CPU8bits|R4[6]                                                                                      ; |CPU8bits|R4[6]                                                                                 ; padio            ;
+; |CPU8bits|R4[5]                                                                                      ; |CPU8bits|R4[5]                                                                                 ; padio            ;
+; |CPU8bits|R4[4]                                                                                      ; |CPU8bits|R4[4]                                                                                 ; padio            ;
+; |CPU8bits|R4[3]                                                                                      ; |CPU8bits|R4[3]                                                                                 ; padio            ;
+; |CPU8bits|R4[2]                                                                                      ; |CPU8bits|R4[2]                                                                                 ; padio            ;
+; |CPU8bits|R4[1]                                                                                      ; |CPU8bits|R4[1]                                                                                 ; padio            ;
+; |CPU8bits|R4[0]                                                                                      ; |CPU8bits|R4[0]                                                                                 ; padio            ;
+; |CPU8bits|R5[7]                                                                                      ; |CPU8bits|R5[7]                                                                                 ; padio            ;
+; |CPU8bits|R5[5]                                                                                      ; |CPU8bits|R5[5]                                                                                 ; padio            ;
+; |CPU8bits|R5[4]                                                                                      ; |CPU8bits|R5[4]                                                                                 ; padio            ;
+; |CPU8bits|R5[3]                                                                                      ; |CPU8bits|R5[3]                                                                                 ; padio            ;
+; |CPU8bits|R5[2]                                                                                      ; |CPU8bits|R5[2]                                                                                 ; padio            ;
+; |CPU8bits|OperandoA[5]                                                                               ; |CPU8bits|OperandoA[5]                                                                          ; padio            ;
+; |CPU8bits|DemuxReal1a8:inst25|19~clkctrl                                                             ; |CPU8bits|DemuxReal1a8:inst25|19~clkctrl                                                        ; outclk           ;
++------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                  ;
++------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                            ; Output Port Name                                                                                ; Output Port Type ;
++------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+; |CPU8bits|Registro8bits:inst12|74374:inst|20                                                         ; |CPU8bits|Registro8bits:inst12|74374:inst|20                                                    ; regout           ;
+; |CPU8bits|muxbus6a1:inst9|Mux0~0                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux0~0                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux0~1                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux0~1                                                                ; combout          ;
+; |CPU8bits|Registro8bits:inst|74374:inst|20                                                           ; |CPU8bits|Registro8bits:inst|74374:inst|20                                                      ; regout           ;
+; |CPU8bits|Registro8bits:inst13|74374:inst|20                                                         ; |CPU8bits|Registro8bits:inst13|74374:inst|20                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst10|74374:inst|20                                                         ; |CPU8bits|Registro8bits:inst10|74374:inst|20                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst14|74374:inst|20                                                         ; |CPU8bits|Registro8bits:inst14|74374:inst|20                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst11|74374:inst|20                                                         ; |CPU8bits|Registro8bits:inst11|74374:inst|20                                                    ; regout           ;
+; |CPU8bits|muxbus6a1:inst8|Mux1~0                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux1~0                                                                ; combout          ;
+; |CPU8bits|UnidadControl:inst5|muxOp:inst24|opOut[2]~0                                                ; |CPU8bits|UnidadControl:inst5|muxOp:inst24|opOut[2]~0                                           ; combout          ;
+; |CPU8bits|Registro8bits:inst|74374:inst|19                                                           ; |CPU8bits|Registro8bits:inst|74374:inst|19                                                      ; regout           ;
+; |CPU8bits|Registro8bits:inst13|74374:inst|19                                                         ; |CPU8bits|Registro8bits:inst13|74374:inst|19                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst14|74374:inst|19                                                         ; |CPU8bits|Registro8bits:inst14|74374:inst|19                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst11|74374:inst|19                                                         ; |CPU8bits|Registro8bits:inst11|74374:inst|19                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst12|74374:inst|19                                                         ; |CPU8bits|Registro8bits:inst12|74374:inst|19                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst|74374:inst|14                                                           ; |CPU8bits|Registro8bits:inst|74374:inst|14                                                      ; regout           ;
+; |CPU8bits|Registro8bits:inst13|74374:inst|14                                                         ; |CPU8bits|Registro8bits:inst13|74374:inst|14                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst10|74374:inst|14                                                         ; |CPU8bits|Registro8bits:inst10|74374:inst|14                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst14|74374:inst|14                                                         ; |CPU8bits|Registro8bits:inst14|74374:inst|14                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst11|74374:inst|14                                                         ; |CPU8bits|Registro8bits:inst11|74374:inst|14                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst12|74374:inst|14                                                         ; |CPU8bits|Registro8bits:inst12|74374:inst|14                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst13|74374:inst|13                                                         ; |CPU8bits|Registro8bits:inst13|74374:inst|13                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst10|74374:inst|13                                                         ; |CPU8bits|Registro8bits:inst10|74374:inst|13                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst14|74374:inst|13                                                         ; |CPU8bits|Registro8bits:inst14|74374:inst|13                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst11|74374:inst|13                                                         ; |CPU8bits|Registro8bits:inst11|74374:inst|13                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst12|74374:inst|13                                                         ; |CPU8bits|Registro8bits:inst12|74374:inst|13                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst|74374:inst|15                                                           ; |CPU8bits|Registro8bits:inst|74374:inst|15                                                      ; regout           ;
+; |CPU8bits|Registro8bits:inst13|74374:inst|15                                                         ; |CPU8bits|Registro8bits:inst13|74374:inst|15                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst14|74374:inst|15                                                         ; |CPU8bits|Registro8bits:inst14|74374:inst|15                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst11|74374:inst|15                                                         ; |CPU8bits|Registro8bits:inst11|74374:inst|15                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst12|74374:inst|15                                                         ; |CPU8bits|Registro8bits:inst12|74374:inst|15                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst13|74374:inst|16                                                         ; |CPU8bits|Registro8bits:inst13|74374:inst|16                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst10|74374:inst|16                                                         ; |CPU8bits|Registro8bits:inst10|74374:inst|16                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst14|74374:inst|16                                                         ; |CPU8bits|Registro8bits:inst14|74374:inst|16                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst11|74374:inst|16                                                         ; |CPU8bits|Registro8bits:inst11|74374:inst|16                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst12|74374:inst|16                                                         ; |CPU8bits|Registro8bits:inst12|74374:inst|16                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst13|74374:inst|17                                                         ; |CPU8bits|Registro8bits:inst13|74374:inst|17                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst10|74374:inst|17                                                         ; |CPU8bits|Registro8bits:inst10|74374:inst|17                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst14|74374:inst|17                                                         ; |CPU8bits|Registro8bits:inst14|74374:inst|17                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst11|74374:inst|17                                                         ; |CPU8bits|Registro8bits:inst11|74374:inst|17                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst12|74374:inst|17                                                         ; |CPU8bits|Registro8bits:inst12|74374:inst|17                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst|74374:inst|18                                                           ; |CPU8bits|Registro8bits:inst|74374:inst|18                                                      ; regout           ;
+; |CPU8bits|Registro8bits:inst13|74374:inst|18                                                         ; |CPU8bits|Registro8bits:inst13|74374:inst|18                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst10|74374:inst|18                                                         ; |CPU8bits|Registro8bits:inst10|74374:inst|18                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst14|74374:inst|18                                                         ; |CPU8bits|Registro8bits:inst14|74374:inst|18                                                    ; regout           ;
+; |CPU8bits|muxbus6a1:inst8|Mux2~0                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux2~0                                                                ; combout          ;
+; |CPU8bits|Registro8bits:inst11|74374:inst|18                                                         ; |CPU8bits|Registro8bits:inst11|74374:inst|18                                                    ; regout           ;
+; |CPU8bits|Registro8bits:inst12|74374:inst|18                                                         ; |CPU8bits|Registro8bits:inst12|74374:inst|18                                                    ; regout           ;
+; |CPU8bits|muxbus6a1:inst8|Mux2~1                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux2~1                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux2~0                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux2~0                                                                ; combout          ;
+; |CPU8bits|muxbus6a1:inst9|Mux2~1                                                                     ; |CPU8bits|muxbus6a1:inst9|Mux2~1                                                                ; combout          ;
+; |CPU8bits|Counter:inst26|temp[3]                                                                     ; |CPU8bits|Counter:inst26|temp[3]                                                                ; regout           ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[7]  ; portadataout7    ;
+; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|ram_block1a0 ; |CPU8bits|Memoria:inst28|altsyncram:altsyncram_component|altsyncram_je81:auto_generated|q_a[12] ; portadataout9    ;
+; |CPU8bits|muxbus6a1:inst8|Mux2~2                                                                     ; |CPU8bits|muxbus6a1:inst8|Mux2~2                                                                ; combout          ;
+; |CPU8bits|DemuxReal1a8:inst25|19                                                                     ; |CPU8bits|DemuxReal1a8:inst25|19                                                                ; combout          ;
+; |CPU8bits|R0[7]                                                                                      ; |CPU8bits|R0[7]                                                                                 ; padio            ;
+; |CPU8bits|R0[6]                                                                                      ; |CPU8bits|R0[6]                                                                                 ; padio            ;
+; |CPU8bits|R0[5]                                                                                      ; |CPU8bits|R0[5]                                                                                 ; padio            ;
+; |CPU8bits|R0[2]                                                                                      ; |CPU8bits|R0[2]                                                                                 ; padio            ;
+; |CPU8bits|R0[1]                                                                                      ; |CPU8bits|R0[1]                                                                                 ; padio            ;
+; |CPU8bits|R1[7]                                                                                      ; |CPU8bits|R1[7]                                                                                 ; padio            ;
+; |CPU8bits|R1[5]                                                                                      ; |CPU8bits|R1[5]                                                                                 ; padio            ;
+; |CPU8bits|R1[4]                                                                                      ; |CPU8bits|R1[4]                                                                                 ; padio            ;
+; |CPU8bits|R1[3]                                                                                      ; |CPU8bits|R1[3]                                                                                 ; padio            ;
+; |CPU8bits|R1[1]                                                                                      ; |CPU8bits|R1[1]                                                                                 ; padio            ;
+; |CPU8bits|R1[0]                                                                                      ; |CPU8bits|R1[0]                                                                                 ; padio            ;
+; |CPU8bits|R2[7]                                                                                      ; |CPU8bits|R2[7]                                                                                 ; padio            ;
+; |CPU8bits|R2[6]                                                                                      ; |CPU8bits|R2[6]                                                                                 ; padio            ;
+; |CPU8bits|R2[5]                                                                                      ; |CPU8bits|R2[5]                                                                                 ; padio            ;
+; |CPU8bits|R2[4]                                                                                      ; |CPU8bits|R2[4]                                                                                 ; padio            ;
+; |CPU8bits|R2[3]                                                                                      ; |CPU8bits|R2[3]                                                                                 ; padio            ;
+; |CPU8bits|R2[2]                                                                                      ; |CPU8bits|R2[2]                                                                                 ; padio            ;
+; |CPU8bits|R2[1]                                                                                      ; |CPU8bits|R2[1]                                                                                 ; padio            ;
+; |CPU8bits|R2[0]                                                                                      ; |CPU8bits|R2[0]                                                                                 ; padio            ;
+; |CPU8bits|R3[7]                                                                                      ; |CPU8bits|R3[7]                                                                                 ; padio            ;
+; |CPU8bits|R3[6]                                                                                      ; |CPU8bits|R3[6]                                                                                 ; padio            ;
+; |CPU8bits|R3[5]                                                                                      ; |CPU8bits|R3[5]                                                                                 ; padio            ;
+; |CPU8bits|R3[4]                                                                                      ; |CPU8bits|R3[4]                                                                                 ; padio            ;
+; |CPU8bits|R3[3]                                                                                      ; |CPU8bits|R3[3]                                                                                 ; padio            ;
+; |CPU8bits|R3[2]                                                                                      ; |CPU8bits|R3[2]                                                                                 ; padio            ;
+; |CPU8bits|R3[1]                                                                                      ; |CPU8bits|R3[1]                                                                                 ; padio            ;
+; |CPU8bits|R3[0]                                                                                      ; |CPU8bits|R3[0]                                                                                 ; padio            ;
+; |CPU8bits|R4[7]                                                                                      ; |CPU8bits|R4[7]                                                                                 ; padio            ;
+; |CPU8bits|R4[6]                                                                                      ; |CPU8bits|R4[6]                                                                                 ; padio            ;
+; |CPU8bits|R4[5]                                                                                      ; |CPU8bits|R4[5]                                                                                 ; padio            ;
+; |CPU8bits|R4[4]                                                                                      ; |CPU8bits|R4[4]                                                                                 ; padio            ;
+; |CPU8bits|R4[3]                                                                                      ; |CPU8bits|R4[3]                                                                                 ; padio            ;
+; |CPU8bits|R4[2]                                                                                      ; |CPU8bits|R4[2]                                                                                 ; padio            ;
+; |CPU8bits|R4[1]                                                                                      ; |CPU8bits|R4[1]                                                                                 ; padio            ;
+; |CPU8bits|R4[0]                                                                                      ; |CPU8bits|R4[0]                                                                                 ; padio            ;
+; |CPU8bits|R5[7]                                                                                      ; |CPU8bits|R5[7]                                                                                 ; padio            ;
+; |CPU8bits|R5[6]                                                                                      ; |CPU8bits|R5[6]                                                                                 ; padio            ;
+; |CPU8bits|R5[5]                                                                                      ; |CPU8bits|R5[5]                                                                                 ; padio            ;
+; |CPU8bits|R5[4]                                                                                      ; |CPU8bits|R5[4]                                                                                 ; padio            ;
+; |CPU8bits|R5[3]                                                                                      ; |CPU8bits|R5[3]                                                                                 ; padio            ;
+; |CPU8bits|R5[2]                                                                                      ; |CPU8bits|R5[2]                                                                                 ; padio            ;
+; |CPU8bits|R5[1]                                                                                      ; |CPU8bits|R5[1]                                                                                 ; padio            ;
+; |CPU8bits|R5[0]                                                                                      ; |CPU8bits|R5[0]                                                                                 ; padio            ;
+; |CPU8bits|addres[3]                                                                                  ; |CPU8bits|addres[3]                                                                             ; padio            ;
+; |CPU8bits|OperandoA[5]                                                                               ; |CPU8bits|OperandoA[5]                                                                          ; padio            ;
+; |CPU8bits|OperandoB[5]                                                                               ; |CPU8bits|OperandoB[5]                                                                          ; padio            ;
+; |CPU8bits|DemuxReal1a8:inst25|19~clkctrl                                                             ; |CPU8bits|DemuxReal1a8:inst25|19~clkctrl                                                        ; outclk           ;
++------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Sep 02 13:20:18 2014
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off MicroComputador -c MicroComputador
+Info: Using vector source file "F:/Others/Quartus MIO/MicroComputador/TestCPUv2.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of TestCPUv2.vwf called MicroComputador.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      63.21 %
+Info: Number of transitions in simulation is 1184
+Info: Vector file TestCPUv2.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 153 megabytes
+    Info: Processing ended: Tue Sep 02 13:20:19 2014
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
